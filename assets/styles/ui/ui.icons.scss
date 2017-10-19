@@ -1,0 +1,105 @@
+/* .........................................................
+
+		UI.Icon
+
+	@	Icon styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	icon base
+..................................... */
+.icon {
+
+}
+.icon-size {
+
+}
+
+/* .....................................
+	social
+..................................... */
+.icon-pinterest {
+	text-indent: -9999px;
+
+	&:hover {
+		opacity: .8;
+	};
+}
+.icon-facebook {
+	text-indent: -9999px;
+
+	&:hover {
+		opacity: .8;
+	};
+}
+.icon-twitter {
+	text-indent: -9999px;
+
+	&:hover {
+		opacity: .8;
+	};
+}
+.icon-instagram {
+	text-indent: -9999px;
+
+	&:hover {
+		opacity: .8;
+	};
+}
+.icon-svpply {
+	text-indent: -9999px;
+
+	&:hover {
+		opacity: .8;
+	};
+}
+
+.icon-pinterest-sm {
+	text-indent: -9999px;
+
+	&:hover {
+		opacity: .8;
+	};
+}
+.icon-twitter-sm {
+	text-indent: -9999px;
+
+	&:hover {
+		opacity: .8;
+	};
+}
+.icon-svpply-sm {
+	text-indent: -9999px;
+
+	&:hover {
+		opacity: .8;
+	};
+}
+
+/* .....................................
+	misc
+..................................... */
+.icon-arrow-left {
+	background: url(#{$cdn}ui.public.sprite.png) no-repeat 0 -50px;
+	padding-left: 35px;
+	line-height: 35px;
+	height: 35px;
+	display: block;
+}
+.disc {
+	@include transition(opacity, 200ms, ease-out);
+	@include border-radius(10px);
+	height: 10px;
+	width: 10px;
+	background: #fff;
+	display: inline-block;
+	&:hover,
+	&.is-active {
+		opacity: .5;
+	}
+}

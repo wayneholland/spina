@@ -1,0 +1,45 @@
+/* .........................................................
+		
+		Module.Tabs
+	
+	@	Tab base styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	tabs global
+..................................... */
+.tabs {
+}
+
+/* .....................................
+	tabs view
+..................................... */
+.tabs-view {
+	display: none;
+}
+.tabs-view.active {
+	display: block;
+}
+
+/* .....................................
+	tabs nav
+..................................... */
+.tabs-nav {
+}	
+.tabs-anchor {
+	display: block;
+}
+.tabs-inactive {
+	display: block;
+}		
+.tabs-anchor.active {
+	color: #000;
+}
+.tabs-anchor.disable:hover {
+	cursor: default;
+}

@@ -1,0 +1,39 @@
+/* .........................................................
+        
+        Module.Scrollbar
+    
+    @   Scrollbar plugin styling
+    @   the Arishill Co. (arishill.com)
+    @   author Scott Robertson
+    @   Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+    scrollbar global
+..................................... */
+.scrollbar {
+    opacity: 0;
+}
+
+/* .....................................
+    scrollbar container
+..................................... */
+.scrollbar-container {
+    position:relative;
+    top:0px;
+} 
+
+/* .....................................
+    scrollbar handle
+..................................... */
+.scrollbar-handle {
+    position:absolute;
+    top: 5px;
+    right: 0px;
+    z-index: 2;
+    background: #e8e8e8;
+    width: 10px;
+    border-radius: 3px;
+}

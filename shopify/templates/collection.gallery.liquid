@@ -1,0 +1,23 @@
+<section class="cascade">
+  <ul class="group-li">
+    {% for product in collection.products %}
+    <li class="item">
+        <a href="{{ product.url }}">
+          <img src="{{ product.featured_image | product_img_url: 'master' }}">
+          <span class="item-desc compliment flex flex-wrap flex-center">
+            <span class="title-3 flex flex-dir">
+              <em>{{ product.title }}</em>
+              <span>
+                {% for tag in product.tags %}
+                  {% if tag == 'Wedding' %}
+                    {{ tag }}
+                  {% endif %}
+                {% endfor %}
+              </span>
+            </span>
+          </span>
+        </a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>

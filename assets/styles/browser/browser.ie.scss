@@ -1,0 +1,39 @@
+/* .........................................................
+        
+        Broswer.IE
+    
+    @   Global IE fixes
+    @   the Arishill Co. (arishill.com)
+    @   author Scott Robertson
+    @   Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	self-clearing floats
+..................................... */
+ .ie7 .group,
+.ie7 .group-li,
+.ie7 .group-p,
+.ie7 .group-div,
+.ie7 .group-section,
+.ie7 .group-span,
+.ie7 .group-ul,
+.ie7 .group-items,
+.ie7 .li-group li {
+	min-height: 1px;
+}
+
+/* .....................................
+	opacity fixes
+..................................... */
+
+.ie7 #element,
+.ie8 #element {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); 
+}
+
+/* .....................................
+	layout fixes
+..................................... */

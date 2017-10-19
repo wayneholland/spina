@@ -1,0 +1,237 @@
+/* .........................................................
+
+    Module.Gallery
+
+  @ Gallery styling
+  @ the Arishill Co. (arishill.com)
+  @ author Scott Robertson
+  @ Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+  gallery global
+..................................... */
+.gallery {
+
+  .item {
+    width: 50%;
+    height: auto;
+    position: relative;
+  }
+
+  a {
+    display: block;
+    opacity: 1;
+    .item-desc {
+      left: 20%;
+    }
+  }
+
+ .item-desc {
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -9999999px;
+    width: 30%;
+    padding: 0 15%;
+    height: 26%;
+    margin-top: -13%;
+    .title-3 {
+      em {
+        font-style: normal;
+      }
+    }
+  }
+
+}
+
+.gallery-about {
+  margin-top: 0 !important;
+  background: #fff;
+  .title-3 {
+    text-align: left;
+  }
+  .block {
+    width: 500px;
+  }
+  .fixed {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+  }
+}
+.gallery {
+.ratio-16-9 {
+  background-color: #fff;
+  position: relative;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  .hgroup {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: -135px;
+    z-index: 10000;
+    text-align: center;
+    font-weight: 100;
+    line-height: 45px;
+    font-size: 18px;
+  }
+  .title-1,
+  .title-2 {
+    text-shadow: 0px 0px 7px rgba(0,0,0,.6);
+    text-align: center;
+    border: none;
+  }
+  p {
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
+  .copy-1 {
+    text-shadow: 0px 0px 7px rgba(0,0,0,.6);
+  }
+  .fixed {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+  }
+}
+}
+.gallery .cover {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+}
+.gallery-social {
+  width: 100%;
+  text-align: center;
+  i {
+    -webkit-filter: drop-shadow( 0px 0px 5px rgba(0,0,0,.6));
+            filter: drop-shadow( -0px 0px 5px rgba(0,0,0,.6));
+  }
+  li {
+    display: inline-block;
+    margin: 0 15px;
+    span {
+      display: inline-block;
+      text-indent: -99999px;
+    }
+  }
+}
+.gallery-list {
+  margin-top: 0 !important;
+  li {
+    float: left;
+    height: 33.3333333%;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    @include transition(opacity, 200ms, ease);
+    &:hover {
+      cursor: pointer;
+      opacity: .7;
+    }
+  }
+}
+#gallery-zoom,
+#appointments-zoom {
+  text-align: center;
+  background: transparent;
+  height: 80%;
+  padding: 0;
+  width: 80%;
+  overflow: visible;
+  left: 15% !important;
+  margin-left: 0% !important;
+  &.is-active {
+    top: 7% !important;
+    @media screen and (max-width: 750px) {
+			width: 80% !important;
+			left: 10% !important;
+			margin-left: 0px !important;
+  	}
+  }
+  @include box-shadow(0, 0, 0, 0, rgba(255,255,255,0));
+  .content {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    display: block;
+    &.is-vert {
+      height: 100%;
+      max-height: 100%;
+      width: auto;
+      margin: auto;
+    }
+    &.is-horz {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      top: 0;
+      -moz-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .icon-close-black {
+    top: -15%;
+    right: -15%;
+  }
+}
+
+.gallery-bridal {
+  li {
+    position: relative;
+    width: 33.3333333%;
+    float: left;
+    padding-bottom: 46.6%;
+    img {
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.gallery .ratio-16-9,
+#bride .ratio-16-9.top {
+  margin-top: 65px;
+}
+.gallery-text {
+  display: inline-block;
+  width: 500px;
+  margin: 100px 0;
+  @media screen and (max-width: 650px) {
+    display: inline-block;
+    width: 80%;
+    margin: 100px 10%;
+  }
+}

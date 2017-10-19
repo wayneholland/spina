@@ -1,0 +1,73 @@
+<script>document.getElementsByTagName('body')[0].className+=' checkout'; document.getElementsByTagName('body')[0].setAttribute('id', 'shipping');</script>
+<section class="checkout-steps row">
+
+  {% if cart.item_count > 0 %}
+    <!-- checkout step -->
+    <form class="col-1-2" id="checkout-form">
+      <div class="checkout-step fixed-stop">
+        <h2 class="title-3"><strong class="title-alt">Shipping Information</strong></h2>
+
+        <fieldset class="row" id="delivery-date">
+          <div class="form-field col-1-2">
+            <label class="title-3">Delivery Date</label>
+            <input data-date-format="mm-dd-yyyy" data-time="" name="attributes[delivery_date]" type="text" value="{{ cart.attributes.delivery_date }}" class="full datepicker-init static" />
+          </div>
+          <div class="form-field col-1-2 l-gtr-3">
+            <label class="title-3">Zip</label>
+            <input name="attributes[postal_code]" type="text" value="{{ cart.attributes.postal_code }}" class="full" />
+
+            <div id="outside-delivery" class="tooltip is-hidden">
+              <p class="title-3 inverse">We're sorry. But this appears to be outside of our delivery area. Please <a href="mailto:info@spinanyc.com?subject=Spina Order Delivery Exception">contact us</a> for exceptions.</p>
+            </div>
+          </div>
+          <div class="title-3 col-1-1 margin-bottom-medium">
+            <p>At this time, delivery is only available within NYC. <a href="/pages/delivery"><strong>More Info</strong></a></p>
+          </div>
+        </fieldset>
+
+
+        <div class="form-field">
+          <label class="title-3">Delivery Instructions</label>
+          <input name="attributes[delivery_instructions]" type="text" value="{{ cart.attributes.delivery_instructions }}" class="full" />
+        </div>
+
+        <div class="form-field">
+          <label class="title-3">Recipient Phone</label>
+          <input name="attributes[delivery_phone]" type="text" value="{{ cart.attributes.delivery_phone }}" class="full" />
+        </div>
+
+        <div class="form-field fixed-stop">
+          <label class="title-3">Message to Recipient</label>
+          <textarea name="attributes[message]" class="full">{{ cart.attributes.message }}</textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- checkout summary -->
+    <div class="checkout-summary fixed-target">
+      <div class="title-3 text-left">
+        <h2><strong class="title-alt">Order Summary</strong></h2>
+        <ul class="margin-top-medium">
+          <li class="row">
+            <span class="label col-2-3">Subtotal</span> <span class="price col-1-3">{{ cart.total_price | money }}</span></li>
+          <!-- <li class="row">
+            <span class="label col-2-3">Tax <em>estimated</em></span> <span class="price col-1-3"></span></li> -->
+          <li class="row">
+            <span class="label col-2-3">Delivery <em>estimated</em></span> <span class="price col-1-3">$10-$35</span></li>
+          <!-- <li class="total row">
+            <span class="label col-2-3"><strong class="title-alt">Grand Total <em>estimated</em></span> <span class="price col-1-3"></span></strong></li> -->
+        </ul>
+        </div>
+        <div class="checkout-action group">
+          <input type="submit" id="continue" disabled class="btn btn-1 btn-standard col" value="Continue">
+          <span class="title-3 col is-block" style="margin-left: 20px;"><a href="/bag" class="icon-arrow-left">Back to Bag</a></span>
+        </div>
+    </div>
+
+    <div class="checkout-absolute-clone"></div>
+    <div class="checkout-fixed-clone"></div>
+
+  {% else %}
+    <p class="title-3 stage autocenter" data-parent="cart-container"><strong>Your bag is empty.</strong><br><a class="title-3 underline" href="/collections/floral">Care to shop?</a></p>
+  {% endif %}
+</form>

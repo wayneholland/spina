@@ -1,0 +1,7 @@
+<nav class="nav-sub">
+  <ul class="group">
+    {% for link in linklists.main-menu.links %}
+       <li><a class="{% if page.title == link.title %}is-active{% endif %}" href="{{ link.url }}" data-scroll="{{ link.title | handleize }}">{{ link.title}}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

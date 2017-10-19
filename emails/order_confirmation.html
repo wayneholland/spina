@@ -1,0 +1,132 @@
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  <center>
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+      <tr>
+        <td align="center" valign="top">
+          <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="20" cellspacing="0" width="600" id="templateHeader">
+                  <tr>
+                    <td class="headerContent"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+                  <tr>
+                    <td valign="top" class="bodyContent">
+                      <div style="text-align: center; font-family: 'Helvetica', sans-serif; font-size: 14px; box-shadow: 0 0 10px 0 #f0f0f0; border: 1px solid #f1f1f1; padding: 50px;">
+                        <img src="http://cdn.shopify.com/s/files/1/1250/6783/t/2/assets/email-logo.png" height="38" width="154">
+                        <p style="padding: 20px 0px 20px 0px; font-weight: bold; color: #000000;">Thank you for your order.</span>
+
+                        <p style="padding: 0px 0px 20px 0px; color: #000000;">This email is to confirm your recent purchase.</p>
+
+                        {% if attributes.delivery_date %}
+                          <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">Deliver on</p>
+                          <p style="padding: 0px 0px 20px 0px; margin: 0px 0px 0px 0px; color: #000000;">{{ attributes.delivery_date }}</p>
+                        {% endif %}
+
+                        {% unless attributes.message == blank %}
+                          <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">Personal Message</p>
+                          <p style="padding: 0px 0px 20px 0px; margin: 0px 0px 0px 0px; color: #000000;">{{ attributes.message }}</p>
+                        {% endunless %}
+
+                        {% if requires_shipping and shipping_address %}
+                        <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">Deliver to
+                        <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; color: #000000;">
+                          {{ shipping_address.name }}<br>
+                          {{ shipping_address.street }}<br>
+                          {{ shipping_address.city }}, {{ shipping_address.province }} {{ shipping_address.zip }}<br>
+                          {{ shipping_address.country }}
+                        </p>
+                        {% endif %}
+
+                        {% unless attributes.delivery_phone == blank %}
+                        <p style="padding: 20px 0px 0px 0px; margin: 0px 0px 0px 0px; font-style: italic; color: #000000;">Delivery Phone: {{ attributes.delivery_phone }}</p>
+                        {% endunless %}
+                        {% unless attributes.delivery_instructions == blank %}
+                        <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-style: italic; color: #000000;">Delivery Instructions: {{ attributes.delivery_instructions }}</p>
+                        {% endunless %}
+
+                        <p style="padding: 20px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">Order Date</p>
+                        <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; color: #000000;">{{ date | date: "%m/%d/%Y" }}</p>
+
+                        {% if billing_address %}
+                          <p style="padding: 20px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">Billing address</p>
+                          <p style="padding: 0px 0px 20px 0px; margin: 0px 0px 0px 0px; color: #000000;">
+                            {{ billing_address.name }}<br>
+                            {{ billing_address.street }}<br>
+                            {{ billing_address.city }}, {{ billing_address.province }}  {{ billing_address.zip }}<br>
+                            {{ billing_address.country }}
+                          </p>
+                        {% endif %}
+
+                        {% for line in line_items %}
+                          <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">{{ line.quantity }}x {{line.title }} for {{ line.price | money }} each {% for discount in line.applied_discounts %} ( -{{ discount.amount | money }} ){% endfor %}</p>
+                        {% endfor %}
+
+                        <p style="color: #000000">
+                          <span style="font-weight: bold;">Subtotal :</span> {{ subtotal_price | money_with_currency  }}<br>
+                          {% if discounts %}
+                          <span style="font-weight: bold;">Discount</span> (code: {{ discounts.first.code }}): {{ discounts_savings | money_with_currency }}<br>
+                          {% endif %}
+                          {% for tax_line in tax_lines %}
+                            <span style="font-weight: bold;">{{ tax_line.title }} :</span> {{ tax_line.price | money_with_currency  }}<br>
+                          {% endfor %}
+
+                          {% if requires_shipping %}
+                          <span style="font-weight: bold;">Delivery :</span> {{ shipping_price | money_with_currency }}<br>
+                          {% endif %}
+                          <span style="font-weight: bold;">Total :</span> {{ total_price | money_with_currency }}
+                        </p>
+
+                        <p style="padding: 20px 0px 0px 0px; color: #000000; font-size: 11px">
+                          <span style="font-weight: bold;">Spina</span><br>
+                          {{ shop.address.address1 }}<br>
+                          {{ shop.address.city }}, {{ shop.address.province_code }} {{ shop.address.zip }}<br>
+                          {{ shop.address.phone }}<br>
+                          <a href="mailto:info@spinanyc.com" style="text-decoration: none; color: #000000; font-weight: bold;"><span style="color: #000000;">info@spinanyc.com</span></a>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="10" cellspacing="0" width="600" id="templateFooter">
+                  <tr>
+                    <td valign="top" class="footerContent">
+                      <table border="0" cellpadding="30" cellspacing="0" width="100%">
+                        <tr>
+                          <td valign="top" width="350">
+                            <div style="text-align: center; font-family: 'Helvetica', sans-serif; font-size: 14px; padding: 0px 0px 0px 0px;">
+                            <p style="text-align: center; font-weight: bold; color: #000000;">
+                              <a href="http://spinanyc.com" style="color: #000000; text-decoration: none;"><span style="color: #000000;">Spina</span></a> /
+                              <a href="https://instagram.com/spina" style="color: #000000; text-decoration: none;"><span style="color: #000000;">Instagram</span></a> /
+                              <a href="https://facebook.com/spinanyc" style="color: #000000; text-decoration: none;"><span style="color: #000000;">Facebook</span></a> /
+                              <a href="https://spinanyc.com/pages/privacy-policy" style="color: #000000; text-decoration: none;"><span style="color: #000000;">Privacy Policy</span></a> /
+                              <a href="https://spinanyc.com/pages/terms-of-service" style="color: #000000; text-decoration: none;"><span style="color: #000000;">Terms of Service</span></a>
+                            </p>
+                            <p style="padding: 10px 0px 0px 0px; text-align: center;">
+                              {{ shop.address.address1 }} {{ shop.address.city }}, {{ shop.address.province_code }} {{ shop.address.zip }} &copy; Spina.
+                            </p>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+</center>
+</body>

@@ -1,0 +1,104 @@
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  <center>
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+      <tr>
+        <td align="center" valign="top">
+          <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="20" cellspacing="0" width="600" id="templateHeader">
+                  <tr>
+                    <td class="headerContent">
+                      {% if fulfillment_aborted %}
+                      <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; color: #000000;">The below order was not automatically fulfilled because it was flagged as suspicious.</p>{% endif %}
+                      <p></p><br>
+                      {% if has_high_risks? %}<p><b>Security check:</b></p>
+                      <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; color: #000000;">This order has a risk of being fraudulent. Review the order in your store's admin and contact the customer to verify their information.</p>
+                      <p></p>{% endif %}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+                  <tr>
+                    <td valign="top" class="bodyContent">
+                      <div style="text-align: center; font-family: 'Helvetica', sans-serif; font-size: 14px; box-shadow: 0 0 10px 0 #f0f0f0; border: 1px solid #f1f1f1; padding: 50px;">
+                        <img src="http://cdn.shopify.com/s/files/1/1250/6783/t/2/assets/email-logo.png" height="38" width="154">
+                        <p style="padding: 20px 0px 20px 0px; font-weight: bold; color: #000000;">Order notification.</p>
+                        <a href="https://{{ shop.permanent_domain }}/admin/orders/{{ id }}" style="text-decoration: underline; color: #000000; font-weight: bold;"><span style="color: #000000;">View order {{order_name}} </span></a><br><br>
+
+                        <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">Deliver on</p>
+                        <p style="padding: 0px 0px 20px 0px; margin: 0px 0px 0px 0px; color: #000000;">{{ attributes.delivery_date }}</p>
+
+                        {% unless attributes.message == blank %}
+                          <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">Personal Message</p>
+                          <p style="padding: 0px 0px 20px 0px; margin: 0px 0px 0px 0px; color: #000000;">{{ attributes.message }}</p>
+                        {% endunless %}
+
+                        {% if requires_shipping and shipping_address %}
+                        <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">Deliver to
+                        <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; color: #000000;">
+                          {{ shipping_address.name }}<br>
+                          {{ shipping_address.street }}<br>
+                          {{ shipping_address.city }}, {{ shipping_address.province }} {{ shipping_address.zip }}<br>
+                          {{ shipping_address.country }}
+                        </p>
+                        {% endif %}
+                        {% unless attributes.delivery_phone == blank %}
+                        <p style="padding: 20px 0px 0px 0px; margin: 0px 0px 0px 0px; font-style: italic; color: #000000;">Delivery Phone: {{ attributes.delivery_phone }}</p>
+                        {% endunless %}
+
+                        {% unless attributes.delivery_instructions == blank %}
+                        <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-style: italic; color: #000000;">Delivery Instructions: {{ attributes.delivery_instructions }}</p>
+                        {% endunless %}
+
+                        <p style="padding: 20px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;">Sender</p>
+                        <p style="padding: 0px 0px 20px 0px; margin: 0px 0px 0px 0px; color: #000000;">
+                          {% if billing_address %}
+                            {{ billing_address.name }}<br>
+                            {{ billing_address.street }}<br>
+                            {{ billing_address.city }}, {{ billing_address.province }}  {{ billing_address.zip }}<br>
+                            {{ billing_address.country }}
+                            <br>
+                            <br>
+                          {% endif %}
+                            Email: {{ email }}
+                            {% if billing_address.phone %}
+                            <br><br>
+                              Phone: {{ billing_address.phone }}
+                            {% endif %}
+                        </p>
+
+                        {% for line in line_items %}
+                          <p style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-weight: bold; color: #000000;"><img src="{{ line | img_url: 'thumb' }}"> {{ line.quantity }}x {{line.title }} for {{ line.price | money }} each {% for discount in line.applied_discounts %} ( -{{ discount.amount | money }} ){% endfor %}</p>
+                        {% endfor %}
+
+                        <p style="color: #000000">
+                          <span style="font-weight: bold;">Subtotal :</span> {{ subtotal_price | money_with_currency  }}<br>
+                          {% if discounts %}
+                          <span style="font-weight: bold;">Discount</span> (code: {{ discounts.first.code }}): {{ discounts_savings | money_with_currency }}<br>
+                          {% endif %}
+                          {% for tax_line in tax_lines %}
+                            <span style="font-weight: bold;">{{ tax_line.title }} :</span> {{ tax_line.price | money_with_currency  }}<br>
+                          {% endfor %}
+
+                          {% if requires_shipping %}
+                          <span style="font-weight: bold;">Delivery :</span> {{ shipping_price | money_with_currency }}<br>
+                          {% endif %}
+                          <span style="font-weight: bold;">Total :</span> {{ total_price | money_with_currency }}
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+</center>
+</body>

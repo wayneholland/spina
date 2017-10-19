@@ -1,0 +1,176 @@
+/* .........................................................
+
+        Module.Plugins
+
+    @   Misc Plugin default styling
+    @   the Arishill Co. (arishill.com)
+    @   author Scott Robertson
+    @   Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	autocenter
+..................................... */
+.autocenter {
+	position: absolute;
+	left: -99999px;
+
+}
+
+/* .....................................
+	link pad
+..................................... */
+.link-pad:hover {
+	cursor: pointer;
+}
+
+/* .....................................
+	truncate
+..................................... */
+.truncate {
+	display: none;
+}
+.truncate-text {
+	display: none;
+}
+
+/* .....................................
+	fillscreen
+...................................... */
+.fillscreen {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.fillscreen-img {
+	display: block;
+	width: 100%;
+}
+
+/* .....................................
+	dropdown (link)
+...................................... */
+.drop {
+}
+.drop-header a {
+
+	&:link,
+	&:visited {
+	}
+	&:hover,
+	&:active {
+	}
+}
+.drop-list {
+	display: none;
+	position: absolute;
+}
+
+/* .....................................
+	swap
+...................................... */
+.swap {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+/* .....................................
+	datepicker
+...................................... */
+.datepicker-init:hover {
+	cursor: pointer;
+	background: #efefef;
+}
+.datepicker .arrow {
+	display: block;
+	width: 17px;
+	height: 35px;
+	position: absolute;
+	left: -17px;
+	bottom: 34px;
+	background: url(#{$cdn}ui.public.sprite.png) no-repeat;
+}
+
+.datepicker {
+  position: absolute;
+  text-transform: uppercase;
+	z-index: 100;
+  top: -75px;;
+  left: 275px;
+  padding: 5px;
+  width: 200px;
+  display: none;
+
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.datepicker > div {
+  display: none;
+}
+.datepicker table {
+  width: 100%;
+  margin: 0;
+}
+.datepicker td,
+.datepicker th {
+  text-align: center;
+  width: 20px;
+  height: 17px;
+  padding-top: 3px;
+}
+.datepicker td.day:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+.datepicker td.day.disabled {
+  color: #eeeeee;
+}
+.datepicker td.day.disabled:hover {
+	background: none;
+}
+.datepicker td.old,
+.datepicker td.new {
+  color: #999999;
+}
+.datepicker td.active:hover,
+.datepicker td.active:hover:hover,
+.datepicker td.active:focus,
+.datepicker td.active:hover:focus,
+.datepicker td.active:active,
+.datepicker td.active:hover:active,
+.datepicker td.active.active,
+.datepicker td.active:hover.active {
+	color: #fff;
+	background: #000000;
+}
+.datepicker td span.active:hover,
+.datepicker td span.active:focus,
+.datepicker td span.active:active,
+.datepicker td span.active.active {
+  color: #ffffff;
+  background-color: #0044cc;
+}
+.datepicker td span.active:active,
+.datepicker td span.active.active {
+  background-color: #003399 \9;
+}
+.datepicker td span.old {
+  color: #999999;
+}
+.datepicker th.next,
+.datepicker th.prev {
+  font-size: 21px;
+}
+.datepicker thead tr:first-child .prev:hover,
+.datepicker thead tr:first-child .next:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}

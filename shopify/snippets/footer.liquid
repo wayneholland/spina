@@ -1,0 +1,45 @@
+<footer>
+  <nav id="nav-footer-primary" class="nav-footer">
+    <ul class="group margin-vert-medium">
+      {% for link in linklists.footer.links %}
+        <li><a href="{{ link.url }}">{{ link.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <p class="site-info">
+    <span class="copyright">&copy; {{ 'now' | date: "%Y" }} {{ shop.address.company }}</span>
+    <a href="{{ settings.map_url }}" target="_blank" class="address">{{ shop.address.street }} {{ shop.address.city }}, {{ shop.address.province_code }}</a>
+    <br>Floral <span class="tel">{{ settings.events_phone }}</span> Bride <span class="tel">{{ settings.bride_phone }}</span>
+  </p>
+
+<nav class="nav-footer nav-social">
+    <ul class="group">
+      <li><a href="{{ settings.yelp_url }}" target="_blank">Yelp</a></li>
+      <li><a href="{{ settings.facebook_url }}" target="_blank">Facebook</a></li>
+      <li><a href="{{ settings.pinterest_url }}" target="_blank">Pinterest</a></li>
+      <li><a href="{{ settings.twitter_url }}" target="_blank">Twitter</a></li>
+      <li><a href="{{ settings.instagram_url }}" target="_blank">Instagram</a></li>
+      <li><a href="{{ settings.wedding_wire_url }}" target="_blank">Wedding Wire</a></li>
+  </ul>
+</nav>
+
+
+
+</footer>
+
+<!-- removed cart json -->
+
+{% include 'notice' %}
+<div data-overlay="color: rgba(255, 255, 255, .9)"></div>
+
+
+<!-- <section class="newsletter" data-switch="toggle: true;">
+  <p class="title-4 title-alt is-active" data-switch-target="newsletter"><a data-switch-trigger="newsletter" class="ignore" href="#">Care to sign up for our newsletter?</a></p>
+  <form id="newsletter-form" action="//spinanyc.us4.list-manage.com/subscribe/post-json?u=64498e46f51099e0d4879b36c&amp;id=336abb1bb6&amp;c=?" method="post" autocomplete="off" novalidate data-subscribe="container: modal-subscribe" data-switch-target="newsletter">
+    <input type="email" value="" name="EMAIL" placeholder="your@email.com">
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_64498e46f51099e0d4879b36c_336abb1bb6" tabindex="-1" value=""></div>
+    <input type="submit" style="display: none;">
+  </form>
+  <div class="message title-4 title-alt"></div>
+</section> -->

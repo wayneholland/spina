@@ -1,0 +1,7 @@
+{% if product.type == 'Gallery' %}
+  {% include 'gallery.show' %}
+{% elsif product.type == 'Bridal Gallery' %}
+  {% include 'gallery.show' %}
+{% else product.type == 'Floral' %}
+  {% include 'floral.show' %}
+{% endif %}

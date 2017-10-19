@@ -1,0 +1,64 @@
+.banner-top {
+  margin-top: 65px;
+}
+.ratio-10-3 {
+  padding-bottom: 30%;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#designers,
+#trunk-shows {
+  .square-blocks {
+    margin-top: 0px;
+    li .ratio-1-1 {
+      box-sizing: border-box;
+      border-bottom: 1px solid #f1f1f1;
+      border-right: 1px solid #f1f1f1;
+    }
+    li .ratio-1-1:last {
+      border-right: none;
+    }
+  }
+  .ratio-1-1 {
+    padding-bottom: 25%;
+    &:hover,
+    &:active {
+      .trunk-show {
+        background-color: #eee;
+      }
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .ratio-1-1 {
+      padding-bottom: 50% !important;
+      width: 50% !important;
+      .title-3,
+      .title-3 span {
+        font-size: 10px !important;
+        line-height: 15px !important;
+      }
+    }
+  }
+  .trunk-show {
+    position: absolute;
+    text-align: center;
+    padding: 15px 0;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: #f1f1f1;
+    transition: background 300ms ease;
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}
+#trunk-shows {
+  .no-trunkshow {
+    opacity: .5;
+  }
+}

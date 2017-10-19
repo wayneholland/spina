@@ -1,0 +1,59 @@
+<section class="banner ratio-16-9 top">
+  <a {% if settings.bride_banner_top_link == '#appointments' %}data-modal-trigger="appointments-zoom"{% endif %} href="{{ settings.bride_banner_top_link }}" style="background-image: url('{{ 'bride-banner-top.jpg' | asset_url }}');">
+    <div class="centered-right">
+      <div class="centered-item title-3 title-large inverse text-left">
+        <h3>{{ settings.bride_banner_top_header }}</h3>
+        <p><span class="underline-hover inverse">{{ settings.bride_banner_top_subtext }}</span></p>
+      </div>
+    </div>
+  </a>
+</section>
+
+<section class="row">
+  <a href="#" data-modal-trigger="appointments-zoom" class="link-block padding-vert-xlarge centered">
+    <div class="centered-item title-3">
+      Visit us:<br> Make an appointment for<br> our West Village Showroom<br>
+      <span class="margin-top-small is-block underline-hover">Reserve Now</span>
+    </div>
+  </a>
+</section>
+
+<ul class="square-blocks">
+  <li class="row">
+    <a {% if settings.bride_grid_top_link == '#appointments' %}data-modal-trigger="appointments-zoom"{% endif %} href="{{ settings.bride_grid_top_link }}" class="is-block col ratio-1-1 relative bg-black">
+      <div class="centered">
+        <div class="centered-item title-3">
+          <h5 class="inverse">{{ settings.bride_grid_top_header }}</h5>
+          <p><span class="underline-hover">{{ settings.bride_grid_top_subtext }}</span></p>
+        </div>
+      </div>
+    </a>
+    <a {% if settings.bride_grid_top_link == '#appointments' %}data-modal-trigger="appointments-zoom"{% endif %} href="{{ settings.bride_grid_top_link }}" class="col ratio-1-1 relative">
+      <img src="{{ 'bride-grid-top.jpg' | asset_url }}" style="background-image: url('{{ 'bride-grid-top.jpg' | asset_url }}');">
+    </a>
+  </li>
+  <li class="row">
+    <a {% if settings.bride_grid_bottom_link == '#appointments' %}data-modal-trigger="appointments-zoom"{% endif %} href="{{ settings.bride_grid_bottom_link }}" class="col ratio-1-1 relative">
+      <img src="{{ 'bride-grid-bottom.jpg' | asset_url }}" style="background-image: url('{{ 'bride-grid-bottom.jpg' | asset_url }}');">
+    </a>
+    <a {% if settings.bride_grid_bottom_link == '#appointments' %}data-modal-trigger="appointments-zoom"{% endif %} href="{{ settings.bride_grid_bottom_link }}" class="is-block col ratio-1-1 relative">
+      <div class="centered">
+        <div class="centered-item title-3">
+          <h5>{{ settings.bride_grid_bottom_header }}</h5>
+          <p><span class="underline-hover">{{ settings.bride_grid_bottom_subtext }}</span></p>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<section class="banner ratio-16-9">
+  <a {% if settings.bride_banner_bottom_link == '#appointments' %}data-modal-trigger="appointments-zoom"{% endif %} href="{{ settings.bride_banner_bottom_link }}" style="background-image: url('{{ 'bride-banner-bottom.jpg' | asset_url }}');">
+    <div class="centered-left">
+      <div class="centered-item title-3 title-large inverse text-left">
+        <h3>{{ settings.bride_banner_bottom_header }}</h3>
+        <p><span class="underline-hover inverse">{{ settings.bride_banner_bottom_subtext }}</span></p>
+      </div>
+    </div>
+  </a>
+</section>

@@ -1,0 +1,35 @@
+/* .........................................................
+		
+		Module.Categories
+	
+	@	Category Nav styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	category global
+..................................... */
+.categories {
+	position: fixed;
+	top: 60px;
+	left: 10px;
+	padding: 20px 40px;
+	border-right: 1px solid #ccc;
+}
+.categories-dept {
+	margin: 10px 0;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.categories-pri {
+	color: #333;
+	text-indent: 5px;
+}
+.categories-sec {
+	color: #666;
+	text-indent: 10px;
+}

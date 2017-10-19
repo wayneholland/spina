@@ -1,0 +1,28 @@
+<form id="delivery-check">
+  <h2 class="title-3"><strong>Check Delivery <br> Availability</strong></h2>
+  <div class="location-price is-hidden title-3">
+    <span class="location"></span><strong class="price"></strong>
+    <a href="#" class="icon-close" data-close></a>
+  </div>
+  <input type="text" placeholder="Enter your zip code" class="is-active">
+
+  <div class="no-delivery is-hidden">
+    <span class="title-3"><strong>Outside Delivery Area</strong></span>
+    <p class="copy-1">We're sorry. But this appears to be outside of our delivery area. Please <a href="mailto:{{ settings.info_email }}?subject=Spina Order Delivery Exception">contact us</a> for exceptions.</p>
+    <a href="#" class="icon-close" data-outside-close></a>
+  </div>
+</form>
+
+<div class="mapIt" id="map" data-zoom="13" data-global="true" data-grayscale="true" data-lat="40.723675" data-lng="-73.986912"></div>
+
+<div class="contain margin-vert-large">
+  <h3 class="title-3 margin-bottom-small">Delivery Area &amp; Rates</h3>
+  <div class="copy-1 margin-bottom-large">
+    {{ settings.delivery_area_text }}
+  </div>
+
+  <h3 class="title-3 margin-bottom-small">Delivery Conditions</h3>
+  <div class="copy-1 margin-bottom-large">
+    {{ settings.delivery_conditions_text }}
+  </div>
+</div>

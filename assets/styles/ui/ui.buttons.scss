@@ -1,0 +1,127 @@
+/* .........................................................
+
+		UI.Buttons
+
+	@	Icon styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	button base
+..................................... */
+a.btn,
+input.btn,
+button.btn {
+	display: block;
+}
+
+/* .....................................
+	button 1
+..................................... */
+a.btn-1,
+input.btn-1,
+button.btn-1 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+	background: #000;
+	display: block;
+	line-height: 40px;
+	font-size: 12px;
+	position: relative;
+	text-align: center;
+	-webkit-filter: blur(0px);
+
+	&:link {
+		color: #fff;
+		text-decoration: none;
+	}
+	&:hover {
+		color: #fff;
+		opacity: .4;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	&:active {
+		color: #ccc;
+		opacity: .8;
+		text-decoration: none;
+	}
+
+}
+a.btn-1.processing,
+input.btn-1.processing,
+button.btn-1.processing {
+	background: #000 url(#{$cdn}ui-btn-loader.gif) 50% -10px no-repeat;
+	text-indent: -99999px;
+}
+
+
+
+/* .....................................
+	button 1
+..................................... */
+a.btn-2,
+input.btn-2,
+button.btn-2 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+	background: #23da75;
+	display: block;
+	line-height: 40px;
+	font-size: 12px;
+	position: relative;
+	text-align: center;
+
+	&:link {
+		color: #fff;
+		text-decoration: none;
+	}
+	&:hover {
+		color: #fff;
+		background: #37e484;
+		text-decoration: none;
+		position: relative;
+	}
+	&:active {
+		color: #fff;
+		background: #19c265;
+		text-decoration: none;
+	}
+
+}
+a.btn-2.processing,
+input.btn-2.processing,
+button.btn-2.processing {
+	background: #23da75 url(#{$cdn}ui-loader.gif) 50% 50% no-repeat;
+	text-indent: -99999px;
+}
+
+/* .....................................
+	button sizes
+..................................... */
+.btn-condensed {
+	width: 75px;
+}
+.btn-standard {
+	width: 140px;
+}
+.btn-mid {
+	width: 170px;
+}
+.btn-wide {
+	width: 100%;
+	padding: 0;
+}
+.btn-long {
+	width: 300px;
+}
+.btn-full {
+	width: 100%;
+	padding: 0;
+}

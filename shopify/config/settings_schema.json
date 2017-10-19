@@ -1,0 +1,1869 @@
+[
+  {
+    "name": "Home Slideshow",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "To not show a slide, simply leave the 'link' field empty."
+      },
+      {
+        "type": "paragraph",
+        "content": "To reorder, since the order is fixed you'll need to re-upload images and change the links to match the order you want."
+      },
+      {
+        "type": "paragraph",
+        "content": "If you'd like to have more than 5 slides, please request an additional item by emailing scott@geshire.com."
+      },
+      {
+        "type": "header",
+        "content": "Slide 1"
+      },
+      {
+        "type": "image",
+        "id": "home-slide-01.jpg",
+        "label": "Image",
+        "info": "2200 × 960"
+      },
+      {
+        "type": "text",
+        "id": "slide_01",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "header",
+        "content": "Slide 2"
+      },
+      {
+        "type": "image",
+        "id": "home-slide-02.jpg",
+        "label": "Image",
+        "info": "2200 × 960"
+      },
+      {
+        "type": "text",
+        "id": "slide_02",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "header",
+        "content": "Slide 3"
+      },
+      {
+        "type": "image",
+        "id": "home-slide-03.jpg",
+        "label": "Image",
+        "info": "2200 × 960"
+      },
+      {
+        "type": "text",
+        "id": "slide_03",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "header",
+        "content": "Slide 4"
+      },
+      {
+        "type": "image",
+        "id": "home-slide-04.jpg",
+        "label": "Image",
+        "info": "2200 × 960"
+      },
+      {
+        "type": "text",
+        "id": "slide_04",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "header",
+        "content": "Slide 5"
+      },
+      {
+        "type": "image",
+        "id": "home-slide-05.jpg",
+        "label": "Image",
+        "info": "2200 × 960"
+      },
+      {
+        "type": "text",
+        "id": "slide_05",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      }
+    ]
+  },
+  {
+    "name": "Home Grid",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Large Top Left"
+      },
+      {
+        "type": "text",
+        "id": "grid_top_left_header",
+        "label": "Header"
+      },
+      {
+        "type": "text",
+        "id": "grid_top_left_subtext",
+        "label": "Subtext",
+        "default": "Shop"
+      },
+      {
+        "type": "text",
+        "id": "grid_top_left_link",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "image",
+        "id": "grid-top-left.jpg",
+        "label": "Image",
+        "info": "800 x 800"
+      },
+      {
+        "type": "header",
+        "content": "Small Top Right"
+      },
+      {
+        "type": "text",
+        "id": "grid_top_right_header",
+        "label": "Header"
+      },
+      {
+        "type": "text",
+        "id": "grid_top_right_subtext",
+        "label": "Subtext",
+        "default": "Gallery"
+      },
+      {
+        "type": "text",
+        "id": "grid_top_right_link",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "image",
+        "id": "grid-top-right.jpg",
+        "label": "Image",
+        "info": "800 x 800"
+      },
+      {
+        "type": "header",
+        "content": "Small Bottom Left"
+      },
+      {
+        "type": "text",
+        "id": "grid_bottom_left_header",
+        "label": "Header"
+      },
+      {
+        "type": "text",
+        "id": "grid_bottom_left_subtext",
+        "label": "Subtext",
+        "default": "Gallery"
+      },
+      {
+        "type": "text",
+        "id": "grid_bottom_left_link",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "image",
+        "id": "grid-bottom-left.jpg",
+        "label": "Image",
+        "info": "800 x 800"
+      },
+      {
+        "type": "header",
+        "content": "Large Bottom Right"
+      },
+      {
+        "type": "text",
+        "id": "grid_bottom_right_header",
+        "label": "Header"
+      },
+      {
+        "type": "text",
+        "id": "grid_bottom_right_subtext",
+        "label": "Subtext",
+        "default": "Shop"
+      },
+      {
+        "type": "text",
+        "id": "grid_bottom_right_link",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "image",
+        "id": "grid-bottom-right.jpg",
+        "label": "Image",
+        "info": "800 x 800"
+      }
+    ]
+  },
+  {
+    "name": "Bride Landing",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Top Banner"
+      },
+      {
+        "type": "text",
+        "id": "bride_banner_top_header",
+        "label": "Header"
+      },
+      {
+        "type": "text",
+        "id": "bride_banner_top_subtext",
+        "label": "Subtext",
+        "default": "View Gallery"
+      },
+      {
+        "type": "text",
+        "id": "bride_banner_top_link",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "image",
+        "id": "bride-banner-top.jpg",
+        "label": "Image",
+        "info": "2200 x 960"
+      },
+      {
+        "type": "header",
+        "content": "Grid Top"
+      },
+      {
+        "type": "text",
+        "id": "bride_grid_top_header",
+        "label": "Header"
+      },
+      {
+        "type": "text",
+        "id": "bride_grid_top_subtext",
+        "label": "Subtext",
+        "default": "View Gallery"
+      },
+      {
+        "type": "text",
+        "id": "bride_grid_top_link",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "image",
+        "id": "bride-grid-top.jpg",
+        "label": "Image",
+        "info": "1000 x 1000"
+      },
+      {
+        "type": "header",
+        "content": "Grid Bottom"
+      },
+      {
+        "type": "text",
+        "id": "bride_grid_bottom_header",
+        "label": "Header"
+      },
+      {
+        "type": "text",
+        "id": "bride_grid_bottom_subtext",
+        "label": "Subtext",
+        "default": "View Gallery"
+      },
+      {
+        "type": "text",
+        "id": "bride_grid_bottom_link",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "image",
+        "id": "bride-grid-bottom.jpg",
+        "label": "Image",
+        "info": "1000 x 1000"
+      },
+      {
+        "type": "header",
+        "content": "Bottom Banner"
+      },
+      {
+        "type": "text",
+        "id": "bride_banner_bottom_header",
+        "label": "Header"
+      },
+      {
+        "type": "text",
+        "id": "bride_banner_bottom_subtext",
+        "label": "Subtext",
+        "default": "View Gallery"
+      },
+      {
+        "type": "text",
+        "id": "bride_banner_bottom_link",
+        "label": "Link",
+        "info": "A link to the relavent page. For relative links, always begin with a forward slash (i.e. \/page)"
+      },
+      {
+        "type": "image",
+        "id": "bride-banner-bottom.jpg",
+        "label": "Image",
+        "info": "2200 x 960"
+      }
+    ]
+  },
+  {
+    "name": "Bride Designers \/ Trunk Shows",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Top Banner"
+      },
+      {
+        "type": "image",
+        "id": "designers-banner-top.jpg",
+        "label": "Image",
+        "info": "2200 x 480. The banner that appears at the top of both the Bridal Designers and Bridal Trunk show pages."
+      },
+      {
+        "type": "header",
+        "content": "Designers"
+      },
+      {
+        "type": "paragraph",
+        "content": "Designers are in a fixed order. Designers will not show if the `Name` field is left blank."
+      },
+      {
+        "type": "paragraph",
+        "content": "If you'd like to have more than 24 designers, please request an additional item by emailing scott@geshire.com."
+      },
+      {
+        "type": "header",
+        "content": "Designer 01"
+      },
+      {
+        "type": "text",
+        "id": "designer_01_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_01_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_01_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_01_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_01_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 02"
+      },
+      {
+        "type": "text",
+        "id": "designer_02_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_02_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_02_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_02_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_02_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 03"
+      },
+      {
+        "type": "text",
+        "id": "designer_03_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_03_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_03_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_03_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_03_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 04"
+      },
+      {
+        "type": "text",
+        "id": "designer_04_name",
+        "label": "Name"
+      },
+      {
+        "type": "product",
+        "id": "designer_04_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_04_location",
+        "label": "Location"
+      },
+      {
+        "type": "text",
+        "id": "designer_04_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_04_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 05"
+      },
+      {
+        "type": "text",
+        "id": "designer_05_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_05_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_05_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_05_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_05_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 06"
+      },
+      {
+        "type": "text",
+        "id": "designer_06_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_06_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_06_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_06_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_06_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 07"
+      },
+      {
+        "type": "text",
+        "id": "designer_07_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_07_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_07_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_07_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_07_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 08"
+      },
+      {
+        "type": "text",
+        "id": "designer_08_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_08_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_08_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_08_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_08_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 09"
+      },
+      {
+        "type": "text",
+        "id": "designer_09_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_09_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_09_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_09_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_09_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 10"
+      },
+      {
+        "type": "text",
+        "id": "designer_10_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_10_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_10_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_10_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_10_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 11"
+      },
+      {
+        "type": "text",
+        "id": "designer_11_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_11_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_11_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_11_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_11_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 12"
+      },
+      {
+        "type": "text",
+        "id": "designer_12_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_12_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_12_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_12_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_12_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 13"
+      },
+      {
+        "type": "text",
+        "id": "designer_13_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_13_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_13_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_13_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_13_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 14"
+      },
+      {
+        "type": "text",
+        "id": "designer_14_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_14_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_14_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_14_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_14_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 15"
+      },
+      {
+        "type": "text",
+        "id": "designer_15_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_15_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_15_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_15_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_15_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 16"
+      },
+      {
+        "type": "text",
+        "id": "designer_16_name",
+        "label": "Name"
+      },
+      {
+        "type": "product",
+        "id": "designer_16_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_16_location",
+        "label": "Location"
+      },
+      {
+        "type": "text",
+        "id": "designer_16_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_16_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 17"
+      },
+      {
+        "type": "text",
+        "id": "designer_17_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_17_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_17_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_17_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_17_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 18"
+      },
+      {
+        "type": "text",
+        "id": "designer_18_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_18_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_18_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_18_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_18_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 19"
+      },
+      {
+        "type": "text",
+        "id": "designer_19_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_19_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_19_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_19_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_19_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 20"
+      },
+      {
+        "type": "text",
+        "id": "designer_20_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_20_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_20_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_20_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_20_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 21"
+      },
+      {
+        "type": "text",
+        "id": "designer_21_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_21_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_21_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_21_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_21_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 22"
+      },
+      {
+        "type": "text",
+        "id": "designer_22_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_22_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_22_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_22_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_22_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 23"
+      },
+      {
+        "type": "text",
+        "id": "designer_23_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_23_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_23_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_23_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_23_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      },
+      {
+        "type": "header",
+        "content": "Designer 24"
+      },
+      {
+        "type": "text",
+        "id": "designer_24_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "designer_24_location",
+        "label": "Location"
+      },
+      {
+        "type": "product",
+        "id": "designer_24_link",
+        "label": "Link to Gallery"
+      },
+      {
+        "type": "text",
+        "id": "designer_24_trunk_show",
+        "label": "Trunk Show Dates"
+      },
+      {
+        "type": "checkbox",
+        "id": "designer_24_trunk_show_on",
+        "label": "Show Trunk Show",
+        "default": false,
+        "info": "If checked, this designer will show the trunk show date entered above."
+      }
+    ]
+  },
+  {
+    "name": "Bride FAQ",
+    "settings": [
+      {
+        "type": "header",
+        "content": "1."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_01_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_01_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "2."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_02_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_02_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "3."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_03_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_03_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "4."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_04_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_04_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "5."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_05_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_05_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "6."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_06_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_06_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "7."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_07_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_07_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "8."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_08_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_08_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "9."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_09_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_09_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "10."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_10_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_10_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "11."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_11_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_11_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "12."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_12_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_12_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "13."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_13_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_13_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "14."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_14_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_14_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "15."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_15_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_15_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "16."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_16_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_16_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "17."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_17_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_17_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "18."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_18_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_18_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "19."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_19_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_19_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "20."
+      },
+      {
+        "type": "text",
+        "id": "bride_faq_20_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_faq_20_answer",
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "name": "About",
+    "settings": [
+      {
+        "type": "image",
+        "id": "about-banner.jpg",
+        "label": "About Image",
+        "info": "800 x 800"
+      },
+      {
+        "type": "textarea",
+        "id": "about_text",
+        "label": "About Text"
+      }
+    ]
+  },
+  {
+    "name": "Contact",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "See the Settings page for editing the address."
+      },
+      {
+        "type": "header",
+        "content": "Spina Floral & Events"
+      },
+      {
+        "type": "image",
+        "id": "contact-events.jpg",
+        "label": "Contact \/ Floral & Events Image",
+        "info": "1000 x 1000"
+      },
+      {
+        "type": "text",
+        "id": "events_phone",
+        "label": "Floral & Events Consultation Phone",
+        "default": "917.797.5650"
+      },
+      {
+        "type": "text",
+        "id": "info_email",
+        "label": "Consultation Email",
+        "default": "info@spinanyc.com"
+      },
+      {
+        "type": "textarea",
+        "id": "consultation_hours",
+        "label": "Consultation Hours",
+        "default": "Mon-Fri 10am-6pm"
+      },
+      {
+        "type": "header",
+        "content": "Spina Bride"
+      },
+      {
+        "type": "image",
+        "id": "contact-bride.jpg",
+        "label": "Contact \/ Bride Image",
+        "info": "1000 x 1000"
+      },
+      {
+        "type": "text",
+        "id": "bride_phone",
+        "label": "Consultation Phone",
+        "default": "646.256.1389"
+      },
+      {
+        "type": "text",
+        "id": "bride_email",
+        "label": "Consultation Email",
+        "default": "info@spinabride.com"
+      },
+      {
+        "type": "textarea",
+        "id": "bride_consultation_hours",
+        "label": "Bridal Consultation Hours",
+        "default": "Sun-Sat 8:30am-8pm"
+      },
+      {
+        "type": "header",
+        "content": "Map"
+      },
+      {
+        "type": "text",
+        "id": "map_latitude",
+        "label": "Google Maps Latitute",
+        "default": "40.732650"
+      },
+      {
+        "type": "text",
+        "id": "map_longitude",
+        "label": "Google Maps Latitute",
+        "default": "-73.998242"
+      },
+      {
+        "type": "text",
+        "id": "map_url",
+        "label": "Google Maps URL",
+        "default": "https:\/\/www.google.com\/maps\/place\/SPINA+NYC\/@40.7326303,-73.9980849,15z\/data=!4m5!3m4!1s0x0:0x4cc36a91c89eb2ae!8m2!3d40.7326303!4d-73.9980849"
+      }
+    ]
+  },
+  {
+    "name": "Delivery",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "delivery_area_text",
+        "label": "Delivery Area"
+      },
+      {
+        "type": "textarea",
+        "id": "delivery_conditions_text",
+        "label": "Delivery Conditions"
+      }
+    ]
+  },
+  {
+    "name": "Social",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Spina Floral & Events"
+      },
+      {
+        "type": "text",
+        "id": "facebook_url",
+        "label": "Facebook URL",
+        "default": "https:\/\/facebook.com\/spinanyc"
+      },
+      {
+        "type": "text",
+        "id": "twitter_url",
+        "label": "Twitter URL",
+        "default": "https:\/\/twitter.com\/spinanyc"
+      },
+      {
+        "type": "text",
+        "id": "pinterest_url",
+        "label": "Pinterest URL",
+        "default": "http:\/\/pinterest.com\/spinanyc"
+      },
+      {
+        "type": "text",
+        "id": "instagram_url",
+        "label": "Instagram URL",
+        "default": "http:\/\/instagram.com\/spina"
+      },
+      {
+        "type": "text",
+        "id": "wedding_wire_url",
+        "label": "Wedding Wire URL",
+        "default": "http:\/\/www.weddingwire.com\/reviews\/spina-brooklyn\/bbd7149dc6320a5b.html"
+      },
+      {
+        "type": "text",
+        "id": "yelp_url",
+        "label": "Yelp URL",
+        "default": "http:\/\/yelp.com\/biz\/spina-brooklyn"
+      },
+      {
+        "type": "header",
+        "content": "Spina Bride"
+      },
+      {
+        "type": "text",
+        "id": "bride_facebook_url",
+        "label": "Facebook URL",
+        "default": "https:\/\/facebook.com\/spinabride"
+      },
+      {
+        "type": "text",
+        "id": "bride_twitter_url",
+        "label": "Twitter URL",
+        "default": "https:\/\/twitter.com\/spinabride"
+      },
+      {
+        "type": "text",
+        "id": "bride_pinterest_url",
+        "label": "Pinterest URL",
+        "default": "http:\/\/pinterest.com\/spinabride"
+      },
+      {
+        "type": "text",
+        "id": "bride_instagram_url",
+        "label": "Instagram URL",
+        "default": "http:\/\/instagram.com\/spinabride"
+      }
+    ]
+  },
+  {
+    "name": "Floral FAQ",
+    "settings": [
+      {
+        "type": "header",
+        "content": "1."
+      },
+      {
+        "type": "text",
+        "id": "faq_01_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_01_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "2."
+      },
+      {
+        "type": "text",
+        "id": "faq_02_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_02_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "3."
+      },
+      {
+        "type": "text",
+        "id": "faq_03_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_03_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "4."
+      },
+      {
+        "type": "text",
+        "id": "faq_04_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_04_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "5."
+      },
+      {
+        "type": "text",
+        "id": "faq_05_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_05_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "6."
+      },
+      {
+        "type": "text",
+        "id": "faq_06_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_06_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "7."
+      },
+      {
+        "type": "text",
+        "id": "faq_07_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_07_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "8."
+      },
+      {
+        "type": "text",
+        "id": "faq_08_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_08_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "9."
+      },
+      {
+        "type": "text",
+        "id": "faq_09_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_09_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "10."
+      },
+      {
+        "type": "text",
+        "id": "faq_10_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_10_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "11."
+      },
+      {
+        "type": "text",
+        "id": "faq_11_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_11_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "12."
+      },
+      {
+        "type": "text",
+        "id": "faq_12_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_12_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "13."
+      },
+      {
+        "type": "text",
+        "id": "faq_13_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_13_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "14."
+      },
+      {
+        "type": "text",
+        "id": "faq_14_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_14_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "15."
+      },
+      {
+        "type": "text",
+        "id": "faq_15_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_15_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "16."
+      },
+      {
+        "type": "text",
+        "id": "faq_16_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_16_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "17."
+      },
+      {
+        "type": "text",
+        "id": "faq_17_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_17_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "18."
+      },
+      {
+        "type": "text",
+        "id": "faq_18_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_18_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "19."
+      },
+      {
+        "type": "text",
+        "id": "faq_19_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_19_answer",
+        "label": "Answer"
+      },
+      {
+        "type": "header",
+        "content": "20."
+      },
+      {
+        "type": "text",
+        "id": "faq_20_question",
+        "label": "Question"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_20_answer",
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "name": "Sales On\/Off",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "maintenance",
+        "label": "Turn Sales Off",
+        "default": false,
+        "info": "If checked, all product pages will show a message saying products are not currently available, and 'Add to Bag' buttons will also be hidden."
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+<div data-component="auth" class="text-middle">
+    <section class="form fill-width text-center small-only-padding-medium padding-large" data-component="activate">
+      {% form 'activate_customer_password' %}
+        <h2 class="head-3 text--black small-only-padding-top-small padding-top-xxlarge">Activate your Account</h2>
+
+        {% if form.posted_successfully? %}
+        {% else %}
+          <div data-prop="errors" class="margin-vert-large border border-all border-red text--red text-4">
+            {{ form.errors | default_errors }}
+          </div>
+        {% endif %}
+
+        <fieldset class="small-centered small-1-1 medium-1-3 large-1-4">
+          <input type="password" name="customer[password]"  placeholder="Password" class="fill-width text-center">
+        </fieldset>
+
+        <fieldset class="small-centered small-1-1 medium-1-3 large-1-4">
+          <input type="password" name="customer[password_confirmation]"  placeholder="Password Confirmation" class="fill-width text-center">
+        </fieldset>
+
+        <fieldset class="small-centered padding-horz-large small-1-1 medium-1-3 large-1-8 margin-top-xlarge">
+          <input type="submit" value="Activate" class="btn-black btn--medium btn--wide">
+          <input type="submit" value="Decline Invitation" name="decline" class="block margin-top-medium text--gray text-4 has-decoration">
+        </fieldset>
+      {% endform %}
+  </section>
+</div>

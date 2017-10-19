@@ -1,0 +1,61 @@
+/* .........................................................
+
+    Template.Services
+
+  @ Service styling
+  @ the Arishill Co. (arishill.com)
+  @ author Scott Robertson
+  @ Updated April 2013
+
+......................................................... */
+
+/* .....................................
+  locations
+..................................... */
+.services {
+  .primary {
+    margin-top: 115px;
+  }
+}
+.service {
+  &.odd {
+    .visual {
+      float: right;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+    .textual {
+      float: left;
+
+      .title-3,
+      &.copy-1 {
+        text-align: left;
+      }
+    }
+  }
+  .visual {
+    width: 50%;
+    float: left;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .textual {
+    float: right;
+    width: 30%;
+    padding: 10%;
+
+    .title-3,
+    &.copy-1 {
+     text-align: right;
+    }
+  }
+  p {
+    margin: 0 0 20px 0;
+  }
+}

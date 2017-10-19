@@ -1,0 +1,180 @@
+/* .........................................................
+
+		Module.Cart
+
+	@	Cart styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+/* .....................................
+	cart bar
+..................................... */
+.cart-bar {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #000000;
+	text-align: center;
+
+	li {
+		background: #000000;
+	}
+	a {
+		display: block;
+		height: 65px;
+		width: 40px;
+		line-height: 65px;
+		@include transition(width, .5s, ease);
+
+		&:hover {
+			@include transition(width, .5s, ease);
+			width: 100px;
+			color: #ffffff;
+		}
+	}
+
+	.on {
+		display: none;
+	}
+}
+
+/* .....................................
+	cart item added
+..................................... */
+.cart-added {
+	li:first-child {
+		opacity: .7;
+	}
+	ul {
+		display: inline-block;
+	}
+	li {
+		display: inline-block;
+		padding: 0 15px;
+		height: 50px;
+		line-height: 50px;
+	}
+}
+
+/* .....................................
+	cart page
+..................................... */
+.cart {
+	margin-top: 115px;
+	min-height: 300px;
+}
+
+/* .....................................
+	cart page item
+..................................... */
+.cart-item {
+	.col-1-2 {
+		height: 350px;
+	}
+	.cart-item-image {
+		overflow: hidden;
+	}
+	img {
+		width: auto;
+		height: 350px;
+	}
+}
+.cart-item-actions {
+	margin-top: 15px;
+
+	.title-3 {
+		margin: auto;
+	}
+}
+.cart-item-details {
+	padding-top: 65px;
+	height: 285px;
+	position: relative;
+	background: #ffffff;
+
+ hgroup {
+		margin: 15px;
+	}
+
+	&:after,
+	&:before {
+		left: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	&:after {
+		border-color: rgba(255, 255, 255, 0);
+		border-left-color: #ffffff;
+		border-width: 20px;
+		top: 50%;
+		margin-top: -20px;
+	}
+	&:before {
+		border-color: rgba(255, 255, 255, 0);
+		border-left-color: #ffffff;
+		border-width: 26px;
+		top: 50%;
+		margin-top: -26px;
+	}
+}
+
+/* .....................................
+	cart page summary
+..................................... */
+.cart-summary {
+	position: fixed;
+	margin: 60px 10% 0 60%;
+	width: 30%;
+	top: 115px;
+	.label,
+	.price {
+		font-size: 12px;
+	}
+}
+.cart-summary.title-3 {
+	text-align: left;
+
+	h2 {
+		padding-bottom: 15px;
+	}
+	span {
+		padding: 5px 0;
+	}
+	em {
+		font-style: italic;
+		text-transform: none;
+	}
+	.total {
+		padding: 25px 0 35px 0;
+	}
+	.cart-actions .col:first-child {
+		margin: 0;
+	}
+	.cart-actions .btn {
+		color: #fff;
+	}
+	.cart-actions .col {
+		margin: 10px 35px;
+		font-size: 12px;
+	}
+}
+
+.cart-item-add input.processing,
+.cart-item-remove input.processing {
+	background: url(#{$cdn}ui.loader.sm.gif) no-repeat 50% 50%;
+	color: transparent;
+}
+
+#continue:disabled {
+	opacity: .4 !important;
+	&:hover {
+		opacity: .4 !important;
+	}
+}

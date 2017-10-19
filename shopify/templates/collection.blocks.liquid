@@ -1,0 +1,14 @@
+<ul class="square-blocks">
+  {% for product in collection.products %}
+  <li class="row">
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    {% if thecycle == 'odd' %}
+      {% include 'block.media' %}
+      {% include 'block.title' %}
+    {% else %}
+      {% include 'block.title' %}
+      {% include 'block.media' %}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

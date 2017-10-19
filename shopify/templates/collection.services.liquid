@@ -1,0 +1,27 @@
+<ul class="cascade oddify">
+  {% for product in collection.products %}
+  <li class="service group" id="{% if product.title == 'Corporate & Production Design' %}corporate{% else %}{{ product.title | handleize }}{% endif %}">
+    <div class="visual" style="background-image: url('{{ product.featured_image | product_img_url: 'master' }}');">
+    </div>
+    <div class="textual copy-1">
+      <h3 class="title-3 margin-bottom-small"><strong>{{ product.title }}</strong></h3>
+      <div class="service-desc">
+        {{ product.description }}
+
+        {% if forloop.last %}
+          {% assign next_item = 'about-us' %}
+        {% elsif collection.products[forloop.index].title == 'Corporate & Production Design' %}
+          {% assign next_item = 'corporate' %}
+        {% else %}
+          {% assign next_item = collection.products[forloop.index].title | handleize %}
+        {% endif %}
+        {% if product.title == 'About Us' %}
+          <div><a href="mailto:{{ shop.email }}?subject=Hello" class="title-3 margin-top-medium underline">Contact Us</a></div>
+        {% else %}
+          <a href="/services/{{ next_item }}" data-scroll="{{ next_item }}" class="title-3 underline">Next</a>
+        {% endif %}
+      </div>
+    </div>
+  </li>
+{% endfor %}
+</ul>

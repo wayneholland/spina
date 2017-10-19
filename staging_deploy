@@ -1,0 +1,1 @@
+grunt shopify:upload --env staging

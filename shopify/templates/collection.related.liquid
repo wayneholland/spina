@@ -1,0 +1,30 @@
+<section class="large-padding-top-xxlarge">
+  <!-- COLLECTION -->
+  {% if collection.products_count > 0 %}
+    {% paginate collection.products by 6 %}
+
+      <section data-component="catalog">
+
+        <ul class="row padding-medium">
+          {% for product in collection.products %}
+            <li data-product="{{ product.id }}">{% include 'collection-item-quarter' %}</li>
+          {% endfor %}
+        </ul>
+
+        {% if paginate.next %}
+          <div class="row text-center padding-top-medium padding-bottom-large">
+            <a href="{{ paginate.next.url }}" data-prop="more" class="head-3 text--green text--green loader--cover-hide loader-green loader--medium is-block text--underline">View More</a>
+          </div>
+        {% endif %}
+
+      </section>
+
+    {% endpaginate %}
+
+  <!-- NO COLLECTION PRODUCTS -->
+  {% else %}
+    <section data-component="catalog" class="padding-horz-large">
+      <h2 class="head-3 padding-vert-xxlarge text-center text--black">Sorry, there are currently no {{ collection.title }} products available. Care to <a href="#" class="text--black text--underline" data-state="catalog.search">Search</a>?</h2>
+    </section>
+  {% endif %}
+</section>

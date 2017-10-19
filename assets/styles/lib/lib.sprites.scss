@@ -1,0 +1,90 @@
+
+.icon-arrow-down {
+	width: 23px;
+	height: 14px;
+	background-position: -0px 0;
+}
+
+.icon-arrow-down-gray {
+	width: 23px;
+	height: 14px;
+	background-position: -30px 0;
+}
+
+.icon-close {
+	width: 14px;
+	height: 14px;
+	background-position: -60px 0;
+}
+
+.icon-close-black {
+	width: 14px;
+	height: 14px;
+	background-position: -80px 0;
+}
+
+.icon-facebook {
+	width: 12px;
+	height: 20px;
+	background-position: -100px 0;
+}
+
+.icon-logo-dark {
+	width: 128px;
+	height: 14px;
+	background-position: -120px 0;
+}
+
+.icon-logo-map {
+	width: 163px;
+	height: 69px;
+	background-position: -255px 0;
+}
+
+.icon-mail {
+	width: 26px;
+	height: 19px;
+	background-position: -425px 0;
+}
+
+.icon-pinterest {
+	width: 19px;
+	height: 18px;
+	background-position: -460px 0;
+}
+
+.icon-twitter {
+	width: 21px;
+	height: 17px;
+	background-position: -485px 0;
+}
+
+.no-svg .icon-arrow-down,
+.no-svg .icon-arrow-down-gray,
+.no-svg .icon-close,
+.no-svg .icon-close-black,
+.no-svg .icon-facebook,
+.no-svg .icon-logo-dark,
+.no-svg .icon-logo-map,
+.no-svg .icon-mail,
+.no-svg .icon-pinterest,
+.no-svg .icon-twitter {
+	display: inline-block;
+	background-image: url("#{$cdn}png-icons-sprite.png");
+	background-size: 515px 69px;
+}
+
+.icon-arrow-down,
+.icon-arrow-down-gray,
+.icon-close,
+.icon-close-black,
+.icon-facebook,
+.icon-logo-dark,
+.icon-logo-map,
+.icon-mail,
+.icon-pinterest,
+.icon-twitter {
+	display: inline-block;
+	background-image: url("#{$cdn}svg-icons-sprite.svg");
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,56 @@
+<!-- COLLECTION -->
+{% if collection.products_count > 0 %}
+  {% paginate collection.products by 30 %}
+        <section class="cascade">
+        	<ul class="group-li">
+        	{% for product in collection.products %}
+
+            {% if product.compare_at_price > product.price %}
+              {% assign has_sale = true %}
+            {% else %}
+              {% assign has_sale = false %}
+            {% endif %}
+
+        		<li class="item">
+        			<a href="{{ product.url }}">
+        					<img src="{{ product.featured_image | product_img_url: 'large' }}">
+        					<div class="details">
+        						<span class="title-3"><strong>{{ product.title }}</strong></span>
+        						{% if has_sale %}
+        							<span class="title-3 sale price">
+                        Sale {% if product.compare_at_price_varies %}
+                          {{ product.compare_at_price_min | money_without_trailing_zeros }}-{{ product.compare_at_price_max |  money_without_trailing_zeros }}
+        								{% else %}
+        								  {{ product.compare_at_price | money_without_trailing_zeros }}
+        								{% endif %}
+        							</span>
+        						{% else %}
+        							<span class="title-3 price">
+                        {% if product.price_varies %}
+                          {{ product.price_min | money_without_trailing_zeros }}-{{ product.price_max | money_without_trailing_zeros }}
+        								{% else %}
+        								  {{ product.price | money_without_trailing_zeros }}
+        								{% endif %}
+        							</span>
+        						{% endif %}
+        					</div>
+        			</a>
+        		</li>
+        	{% endfor %}
+        	</ul>
+        </section>
+
+      {% if paginate.next %}
+        <div class="row text-center padding-top-medium padding-bottom-large">
+          <!-- <a href="{{ paginate.next.url }}" data-prop="more" >View More</a> -->
+        </div>
+      {% endif %}
+
+  {% endpaginate %}
+
+<!-- NO COLLECTION PRODUCTS -->
+{% else %}
+  <section>
+    <h2>Sorry, there are currently no {{ collection.title }} products available.</h2>
+  </section>
+{% endif %}

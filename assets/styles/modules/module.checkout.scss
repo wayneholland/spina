@@ -1,0 +1,169 @@
+/* .........................................................
+
+    Module.Checkout
+
+  @ Checkout styling
+  @ the Arishill Co. (arishill.com)
+  @ author Scott Robertson
+  @ Updated April 2013
+
+......................................................... */
+
+/* .....................................
+  checkout steps
+..................................... */
+.checkout-steps {
+  position: relative;
+  margin-top: 65px;
+}
+.checkout-steps .col-1-2 {
+  margin-bottom: 35px;
+  .cart-item .col-1-2 {
+    margin-bottom: 0;
+  }
+}
+.checkout-step {
+    padding-left: 65px;
+    padding-top: 43px;
+  label {
+    padding-bottom: 5px;
+  }
+  h2:first-child {
+    padding-top: 0;
+  }
+  h2 {
+    padding: 30px 0 20px 0;
+  }
+  textarea {
+    height: 100px;
+  }
+  .title-3 {
+    text-align: left;
+  }
+  #delivery-date {
+    position: relative;
+  }
+  .form-field {
+    margin-bottom: 0;
+  }
+  .exp-label {
+    position: relative;
+    left: -30px;
+  }
+  .exp-divide {
+    position: absolute;
+    top: 41px;
+    left: -15px;
+    font-size: 16px;
+    color: #ccc;
+  }
+  .credit-cards {
+    line-height: 90px;
+    height: 90px;
+    text-align: right;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+
+/* .....................................
+  checkout summary
+..................................... */
+.checkout-summary {
+  position: fixed;
+  top: 125px;
+  margin: 0px 10% 0 60%;
+  width: 30%;
+}
+.checkout-summary.title-3 {
+  text-align: left;
+
+  h2 {
+    padding-bottom: 15px;
+  }
+  span {
+    padding: 5px 0;
+  }
+  em {
+    font-style: italic;
+    text-transform: none;
+  }
+  .total {
+    padding: 25px 0 35px 0;
+  }
+}
+
+// .checkout-fixed-clone {
+//   position: fixed;
+//   top: 125px;
+//   height: 100px;
+//   width: 1px;
+//   visibility: hidden;
+//   background: transparent;
+//   right: 0;
+// }
+// .checkout-absolute-clone {
+//   width: 1px;
+//   visibility: hidden;
+//   background: transparent;
+//   position: absolute;
+//   bottom: 0px;
+//   height: 100px;
+//   right: 0;
+// }
+.checkout-fixed-clone {
+  position: fixed;
+  top: 30%;
+  height: 100px;
+  width: 1px;
+  visibility: hidden;
+  background: transparent;
+  right: 0;
+}
+.checkout-absolute-clone {
+  width: 1px;
+  visibility: hidden;
+  background: transparent;
+  position: absolute;
+  bottom: 0px;
+  height: 100px;
+  right: 0;
+}
+
+/* .....................................
+  checkout action
+..................................... */
+.checkout-action {
+  margin: 40px 0;
+  font-size: 10px;
+}
+
+/* .....................................
+  thanks
+..................................... */
+#thanks {
+  .banner {
+    height: 250px;
+    background: grey;
+    width: 100%;
+    margin-top: 65px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  h4 strong {
+    font-weight: bold;
+    color: #000;
+  }
+  .title-3 span {
+    padding: 2px 0;
+    font-size: 12px;
+  }
+  #page-customer-info {
+    li {
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,226 @@
+/* .........................................................
+
+		Type.Title
+
+	@	Title styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+/* .....................................
+	title 1
+..................................... */
+.title-1 {
+	font-size: 24px;
+	font-weight: normal;
+	letter-spacing: 10px;
+	font-family: $font-1-reg;
+	color: #fff;
+	text-transform: uppercase;
+
+	line-height: 32px;
+	display: block;
+	&.inverse {
+		color: #333;
+	}
+}
+
+a.title-1:link,
+a.title-1:visited {
+	text-decoration: none;
+}
+a.title-1:hover,
+a.title-1:active {
+	text-decoration: none;
+}
+
+/* .....................................
+	title 2
+..................................... */
+.title-2 {
+	font-size: 18px;
+	font-family: $font-2;
+	color: #fff;
+	font-weight: normal;
+	text-align: left;
+	letter-spacing: 4px;
+	line-height: 21px;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 3px;
+
+	display: block;
+
+	em {
+		font-style: italic;
+	}
+
+	a:link,
+	a:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	a:hover,
+	a:active {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+a.title-2:link,
+a.title-2:visited {
+	color: #fff;
+	text-decoration: none;
+}
+a.title-2:hover,
+a.title-2:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* .....................................
+	title 3
+..................................... */
+.title-3 {
+	font-size: 13px;
+	letter-spacing: 3px;
+	font-family: $font-1-reg;
+	color: #666;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+
+	line-height: 24px;
+	display: block;
+
+	&.title-large {
+		font-size: 18px;
+    line-height: 28px;
+	}
+	strong,
+	&.strong,
+	.strong {
+		font-family: $font-1-reg;
+		color: #555;
+		font-weight: 600;
+	}
+
+	&.title-alt,
+	.title-alt {
+		color: #80839a;
+	}
+
+	em {
+		font-style: italic;
+	}
+	a:link,
+	a:visited  {
+		color: #666;
+		text-decoration: underline;
+	}
+
+	a:hover,
+	a:active {
+		color: #666;
+		text-decoration: underline;
+	}
+
+	span {
+		display: block;
+		padding: 7px 0;
+		font-size: 12px;
+		opacity: .7;
+	}
+
+	.icon-arrow-left:link,
+	.icon-arrow-left:visited {
+		text-decoration: none;
+	}
+	.icon-arrow-left:hover,
+	.icon-arrow-left:active {
+		opacity: .7;
+		text-decoration: none;
+	}
+	&.inverse {
+		color: #fff;
+	}
+}
+a.title-3:link,
+a.title-3:visited  {
+	color: #666;
+	text-decoration: underline;
+}
+
+a.title-3:hover,
+a.title-3:active {
+	color: #666;
+	text-decoration: underline;
+}
+
+/* .....................................
+	title 4
+..................................... */
+.title-4 {
+	font-size: 11px;
+	letter-spacing: 3px;
+	font-family: $font-1-reg;
+	color: #ccc;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+
+	line-height: 21px;
+	display: block;
+
+	&.title-alt {
+		color: #999;
+	}
+	strong {
+		font-family: $font-1-reg;
+		color: #000000;
+		font-weight: 600;
+	}
+	em {
+		font-style: italic;
+	}
+	a:link,
+	a:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	a:hover,
+	a:active {
+		color: #666;
+		text-decoration: none;
+	}
+}
+a.title-4:link,
+a.title-4:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+a.title-4:hover,
+a.title-4:active {
+	color: #666;
+	text-decoration: none;
+}
+
+.title-4 {
+	.ignore:link,
+	.ignore:visited {
+		color: #666;
+		text-decoration: none;
+	}
+	.ignore:hover,
+	.ignore:active {
+		color: 444;
+		text-decoration: none;
+	}
+}
+.inverse {
+	color: #fff;
+}

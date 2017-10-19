@@ -1,0 +1,195 @@
+/* .........................................................
+
+		Layout.Footer
+
+	@	Styling for the footer layout
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	footer
+..................................... */
+footer {
+  position: absolute !important;
+  bottom: 0;
+  clear: both;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 5px;
+  height: 220px;
+  -webkit-transform: translateZ(0);
+}
+
+/* .....................................
+  nav footer
+..................................... */
+#nav-footer-primary {
+  li {
+    padding: 0 25px;
+  }
+}
+.nav-footer {
+  width: 100%;
+
+  margin: 0;
+  padding-top: 25px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    padding: 0 8px 0 15px;
+    line-height: 50px;
+  }
+
+  a:link,
+  a:visited {
+    color: #000;
+    text-decoration: none;
+  }
+  a:hover,
+  a:active {
+    color: #666;
+    text-decoration: none;
+  }
+}
+
+.nav-social {
+  padding: 0 0 15px 0;
+  font-size: 10px;
+  margin-bottom: 60px;
+
+  a:link,
+  a:visited {
+    color: #666;
+    text-decoration: none;
+  }
+  a:hover,
+  a:active {
+    color: #000;
+    text-decoration: none;
+  }
+}
+.nav-social li {
+  background: url(#{$cdn}ui.bullet.png) 0 -58px no-repeat;
+}
+.nav-social li:first-child {
+  background: none;
+}
+.ie7 .nav-footer li {
+  display: inline;
+  zoom: 1;
+}
+
+/* .....................................
+  site info
+..................................... */
+.site-info {
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    padding: 0 8px 0 15px;
+    line-height: 15px;
+    background: url(#{$cdn}ui.bullet.png) 0 -74px no-repeat;
+  }
+  span:first-child {
+    background: none;
+  }
+}
+
+/* .....................................
+  newsletter
+..................................... */
+.newsletter {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0px;
+  left: 0;
+
+  background: #f5f5f5;
+  text-align: center;
+
+  p {
+    line-height: 60px;
+    height: 60px;
+  }
+  .message {
+    height: 60px;
+    width: 100%;
+    background: #F5F5F5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: none;
+    opacity: 1;
+    line-height: 60px;
+
+    &.is-active {
+      display: block;
+      opacity: 1;
+    }
+  }
+  form {
+    height: 60px;
+    width: 500px;
+    margin: auto;
+    &.processing {
+      background: url(#{$cdn}ui.loader.sm.gray.gif) 50% 50% no-repeat;
+      input {
+        display: none;
+      }
+    }
+    input {
+      margin-top: 7px;
+      letter-spacing: 1px;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #DDD;
+    }
+  }
+//   @include transition(all, 1s, ease);
+  [data-switch-target] {
+    display: none;
+    opacity: 0;
+    &.is-active {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  &.active {
+//     bottom: 0;
+//     @include transition(all, 1s, ease);
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  .nav-footer li {
+      display: block !important;
+      line-height: 25px !important;
+      background: none;
+  }
+  .site-info {
+    margin-bottom: 20px;
+    span {
+      display: block !important;
+      background: none;
+    }
+  }
+}

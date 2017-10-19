@@ -1,0 +1,249 @@
+/* .........................................................
+
+		Layout.Masthead
+
+	@	Styling for the masthead layout
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	header
+..................................... */
+#services header {
+	height: 115px;
+}
+header {
+	background: #ffffff;
+
+	text-align: center;
+
+	position: fixed;
+	-webkit-transform: translateZ(0);
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100000;
+	height: 65px;
+}
+header h1 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 128px;
+	padding: 25px 65px;
+	span {
+		display: inline-block;
+		text-indent: -9999px;
+	}
+}
+
+/* .....................................
+	nav main
+..................................... */
+.nav-main {
+	width: 100%;
+
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.nav-main li {
+	display: inline-block;
+	padding: 0 25px;
+	line-height: 65px;
+	background: url(#{$cdn}ui.bullet.png) 0 -50px no-repeat;
+	&.relative {
+		position: relative;
+	}
+}
+.nav-main li:first-child {
+	background: none;
+}
+.ie7 .nav-main li {
+	display: inline;
+	zoom: 1;
+}
+.nav-main a:link,
+.nav-main a:visited {
+	font-weight: 500;
+	color: #000;
+	text-decoration: none;
+}
+.nav-main a:hover,
+.nav-main a:active {
+	font-weight: 500;
+	color: #666;
+	text-decoration: none;
+}
+
+.nav-trigger {
+	.nav-trigger-dropdown {
+		border-bottom: 1px solid transparent;
+		padding-bottom: 2px;
+	}
+}
+.nav-trigger:hover {
+	.nav-trigger-dropdown {
+		border-bottom: 1px solid #000;
+	}
+	.nav-dropdown {
+		display: block;
+		position: absolute;
+		top: 45px;
+		left: 0;
+		background: #fff;
+		text-align: left;
+		padding: 10px 0;
+		min-width: 150px;
+	}
+}
+.nav-dropdown {
+	display: none;
+	li {
+		display: block;
+		line-height: 35px;
+		background: none;
+		padding: 0 25px;
+	}
+}
+
+/* .....................................
+	nav sub
+..................................... */
+.nav-sub {
+	height: 50px;
+
+	background: #ffffff;
+
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.nav-sub li {
+	display: inline-block;
+	padding: 0 25px;
+	line-height: 30px;
+
+	background: url(#{$cdn}ui.bullet.png) 0 -68px no-repeat;
+}
+.nav-sub li:first-child {
+	background: none;
+}
+.ie7 .nav-sub li {
+	display: inline;
+	zoom: 1;
+}
+
+.nav-sub a:link,
+.nav-sub a:visited {
+	color: #666;
+	text-decoration: none;
+}
+.nav-sub a:hover,
+.nav-sub a:active,
+.nav-sub a.is-active, {
+	color: #000;
+	text-decoration: none;
+}
+.nav-menu-trigger {
+	display: none;
+}
+
+@media screen and (max-width: 850px) {
+	.nav-sub {
+		display: none !important;
+	}
+	header.is-active {
+		height: 100%;
+		.nav-menu-trigger {
+			background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Ctitle%20fill%3D%22%23030C06%22%3Eicon%3C%2Ftitle%3E%3Cpath%20fill%3D%22%23030C06%22%20d%3D%22M25.13%206.83l-2.05-2.05-8.17%208.17-8.17-8.17-2.05%202.05L12.86%2015l-8.17%208.17%202.05%202.05%208.17-8.17%208.17%208.17%202.05-2.05L16.96%2015l8.17-8.17z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E'); background-repeat: no-repeat;
+		}
+		.nav-main {
+			display: block;
+		}
+	}
+	.nav-menu-trigger {
+		display: block;
+		display: inline-block;
+  	white-space: nowrap;
+  	background-position: center center;
+  	&:before {
+    	content: 'i';
+    	color: transparent;
+  	}
+		text-decoration: none !important;
+		background-size: contain;
+		height: 24px;
+		line-height: 24px;
+		width: 24px;
+		background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Ctitle%3Eicon%3C%2Ftitle%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M2.68%205.55h24.64v2.1H2.68zM2.68%2013.95h24.64v2.1H2.68zM2.68%2022.35h24.64v2.1H2.68z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat;
+		position: absolute;
+		top: 20px;
+		left: 20px;
+	}
+	.nav-main {
+		overflow-y: auto;
+		display: none;
+		position: fixed;
+		top: 100px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #ffffff;
+		z-index: 1000;
+		font-size: 13px;
+		font-weight: 600;
+		ul {
+			text-align: center;
+			margin-left: 0;
+		}
+		li {
+			display: block;
+			line-height: 35px;
+			background: none;
+		}
+	}
+	.nav-trigger:hover {
+		.nav-trigger-dropdown {
+			border-bottom: none;
+		}
+		.nav-dropdown {
+			display: block;
+		}
+	}
+	.nav-dropdown {
+		display: block !important;
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+		background: #fff;
+		text-align: center !important;
+		padding: 10px 0;
+		min-width: 0px !important;
+		a {
+			color: #999 !important;
+		}
+	}
+
+	header {
+		width: 100%;
+		min-width: 0px;
+		h1 {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			width: 128px;
+			padding: 25px 0px;
+			margin-left: -64px;
+		}
+	}
+}

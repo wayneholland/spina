@@ -1,0 +1,33 @@
+/* .....................................
+        
+	Doc.Maintenance
+
+@   Styling for temporary maintenance
+@   the Arishill Co. (arishill.com)
+@   author Scott Robertson
+@   Updated April 2013
+
+..................................... */
+
+
+/* .....................................
+    default
+..................................... */
+	html {
+
+	}
+	body {
+		font: normal 62.5%/1.75em $font-1-reg;
+		background: #000;
+	}
+
+/* .....................................
+    loading
+..................................... */
+	.loading {
+		opacity: 1;
+	}
+	.active {
+		opacity: 1;
+		@include transition(opacity,1s,ease-in-out);	
+	}

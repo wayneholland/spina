@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" class="fadeout">
+<head>
+  <title>{{ page_title }}{% unless page_title contains shop.name %} | {{ shop.name }}{% endunless %}</title>
+
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta name="description" content="Spina is a floral design and full-service Event Management company that prides in providing world class service by incorporating the highest quality products.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png">
+
+  <!-- styles -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+  <link type="text/css" href="{{ 'spinanyc.min.css' | asset_url }}" rel="stylesheet">
+
+  <!-- scripts -->
+  <script src="https://use.typekit.net/pdm2uis.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script src="{{ 'modernizr.js' | asset_url }}"></script>
+
+  <!-- shopify -->
+  {{ content_for_header }}
+</head>
+  {% assign body_class = page_title | handleize %}
+  <body id="{{ body_class }}" class="{{ body_class }} {% if body_class == 'home-spina' %}scroll{% endif %}">
+  <script>var win_width = window.innerWidth, body_class = 'xxlarge';
+  if (win_width < 1600) { body_class = 'xlarge'; }
+  if (win_width < 1300) { body_class = 'large'; }
+  if (win_width < 1000) { body_class = 'medium';}
+  if (win_width < 641) {body_class = 'small';}
+  document.getElementsByTagName('body')[0].className+=' media-' + body_class;
+  window.addEventListener("pageshow", function() {
+    var cls = document.documentElement.className.replace('fadeout', 'is-loaded');
+    document.documentElement.setAttribute('class', cls);
+  }, false);
+  </script>
+  <ul class="preload"><li id="preload-0"></li><li id="preload-1"></li><li id="preload-2"></li></ul>
+  <div class="wrap">
+    {% include 'header' %}
+    <section class="primary">
+      {{ content_for_layout }}
+    </section>
+  </div>
+  {% include 'footer' %}
+  <script>setTimeout(function() { var cls = document.documentElement.className.replace('fadeout', 'is-loaded');  document.documentElement.setAttribute('class', cls); }, 750);</script>
+  <script>
+    var SPN = {
+      config: {},
+      map: {
+        url: ''
+      }
+    };
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA25tyf5gY8JupBneg0IypbYfw74QGJ6BA"></script>
+  <script>
+    $(window).on('resize', function() {
+      var body_class = 'xxlarge', win_width = $(window).width(); $('body').removeClass('media-small media-medium media-large media-xlarge media-xxlarge');
+      if (win_width < 1600) { body_class = 'xlarge'; } if (win_width < 1300) { body_class = 'large'; } if (win_width < 1000) { body_class = 'medium';} if (win_width < 641) {body_class = 'small';}
+      $('body').addClass('media-' + body_class);
+    });
+  </script>
+  <script src="{{ 'spinanyc.min.js' | asset_url }}"></script>
+
+  {% if template contains 'customers' %}
+    {{ "shopify_common.js"  | shopify_asset_url | script_tag }}
+    {{ "customer_area.js"  | shopify_asset_url | script_tag }}
+    {% if template == 'customers/addresses' %}
+      <script type="text/javascript" charset="utf-8">
+        new Shopify.CountryProvinceSelector('address_country', 'address_province', { hideElement: 'address_province_container' });
+        </script>
+    {% endif %}
+  {% endif %}
+
+  <i class="page-loader loader-gray loader--xlarge is-processing"></i>
+
+  <div id="appointments-zoom" class="overlay" data-modal>
+    <div class="content">
+      <script>
+        if (window.self == window.top) {
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.src = 'https://squareup.com/appointments/buyer/widget/af47c401-965e-44ca-95f6-2bd466f4b5ca.js';
+          $('#appointments-zoom .content').append(s);
+        }
+      </script>
+    </div>
+    <a href="#" class="icon-close-black" data-modal-close>Close it</a>
+  </div>
+</body>
+</html>

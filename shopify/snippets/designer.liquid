@@ -1,0 +1,34 @@
+{% if trunk_show_on and page.handle != 'designers' %}
+  <a href="#" data-modal-trigger="appointments-zoom" class="is-block col ratio-1-1 relative">
+    <div class="centered">
+      <div class="centered-item title-3">
+        <h5>{{ name }}</h5>
+        <p><span>{{ location }}</span></p>
+      </div>
+    </div>
+    <div class="is-block trunk-show title-3">
+      Trunk Show <br>
+      {{ trunk_show }}
+    </div>
+  </a>
+{% else %}
+  {% if designer_link != blank and page.handle == 'designers' %}
+  <a href="/products/{{ designer_link }}" class="is-block col ratio-1-1 relative no-trunkshow">
+    <div class="centered">
+      <div class="centered-item title-3">
+        <h5>{{ name }}</h5>
+        <p><span>{{ location }}</span></p>
+      </div>
+    </div>
+  </a>
+  {% else %}
+  <div class="is-block col ratio-1-1 relative no-trunkshow">
+    <div class="centered">
+      <div class="centered-item title-3">
+        <h5>{{ name }}</h5>
+        <p><span>{{ location }}</span></p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+{% endif %}

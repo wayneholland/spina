@@ -1,0 +1,281 @@
+/* .........................................................
+
+		UI.Forms
+
+	@	Form default styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	form fields
+..................................... */
+.form-field {
+	position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+
+	&.condensed {
+		width: 75px;
+	}
+	&.standard {
+		width: 100px;
+	}
+	&.wide {
+	}
+	&.full {
+		width: 100%;
+		text-indent: 15px;
+		padding: 15px 0 10px 0;
+	}
+	&.long {
+		width: 300px;
+	}
+
+	&.mid {
+		width: 225px;
+		text-indent: 15px;
+	}
+
+	&.fill {
+		padding: 17px 0 10px 0;
+		margin-right: 5%;
+	}
+	&.input-alt {
+		margin: auto;
+		padding: 3px;
+		display: block;
+		border: 1px solid #ccc;
+		background: #fff;
+	}
+
+	&.input-arrow {
+		background: transparent;
+		border: 0;
+		border-bottom: 1px dotted #fff;
+		width: 350px;
+		color: #fff;
+		font-style: italic;
+		font-size: 1.2em;
+		letter-spacing: 2px;
+		padding: 6px 0;
+	}
+
+	padding: 10px 0;
+	line-height: 18px;
+	font-size: 14px;
+	display: block;
+	font-weight: normal;
+	color: #000000;
+	border-bottom: 1px solid #F1EEE9;
+	margin-bottom: 15px;
+
+	background: #f5f5f5;
+
+	&:focus {
+		@include box-inset(0,0,5px,0,#f1f1f1);
+	}
+}
+
+
+textarea {
+	padding: 10px 0;
+	line-height: 18px;
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	border-bottom: 1px solid #F1EEE9;
+	background: #f5f5f5;
+
+	&.full {
+		width: 94%;
+		padding: 15px 3% 10px 3%;
+	}
+	&.condensed {
+		width: 75px;
+	}
+	&.standard {
+		width: 100px;
+	}
+	&.wide {
+		width: 96%;
+		padding: 10px 3%;
+	}
+	&.long {
+		width: 300px;
+	}
+}
+
+textarea.area-alt {
+	margin: auto;
+	padding: 3px;
+	display: block;
+	border: 1px solid #ccc;
+	background: #fff;
+	height: 200px;
+
+	&.condensed {
+		width: 75px;
+	}
+	&.standard {
+		width: 100px;
+	}
+	&.wide {
+		width: 96%;
+		padding: 17px 3% 10px 3%;
+	}
+	&.long {
+		width: 300px;
+	}
+}
+
+label {
+
+}
+
+/* ............................................................
+	form errors
+............................................................ */
+.error-notice {
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	color: #fff;
+	font-style: italic;
+	display: none;
+}
+.contain-error {
+	position: relative;
+}
+.form-error {
+	display: block;
+	position: absolute;
+	top: 15px;
+	right: 0px;
+	padding: 5px;
+	text-align: center;
+	background: #EFEFEF;
+	border: 1px solid #e0e0e0;
+	width: 200px;
+}
+
+/* ............................................................
+	custom forms
+............................................................ */
+
+.ui-form {
+
+	/* .....................................
+		checkbox
+	..................................... */
+	.ui-checkbox {
+		display: block;
+		width: 18px;
+		height: 17px;
+		background: url(#{$cdn}ui-sprite-forms.png) 0 -18px;
+		border: 1px solid #fff;
+
+		&.checked {
+			background: url(#{$cdn}ui-sprite-forms.png) 0 0px;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		&:active {
+			border: 1px solid #999;
+		}
+		&.focus {
+			border: 1px solid #999;
+		}
+		&.disabled {
+			opacity: .5;
+		}
+	}
+
+	/* .....................................
+		select
+	..................................... */
+	.ui-select {
+		position: relative;
+		z-index: 1;
+		display: block;
+
+		&:link,
+		&:visited {
+		}
+		&:hover,
+		&:active {
+		}
+
+		&.active {
+			z-index: 10000;
+		}
+		.current_selected {
+			padding: 7px 0;
+			display: block;
+
+			&.active {
+				border-top: 1px dotted #000;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&.focus {
+
+		}
+		.options {
+			display: none;
+			position: absolute;
+			top: 33px;
+			left: 0;
+			z-index: 100;
+			width: 100%;
+			font-size: 10px;
+			min-height: 135px;
+			background: #ffffff url(#{$cdn}bg-product-options.png) repeat-y 0 0;
+			border-top: 1px dotted #4D4D4D;
+		}
+		.options:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+
+		span {
+			display: block;
+			width: 124px;
+			float: left;
+			padding: 8px 0;
+			border-bottom: 1px dotted #ccc;
+			text-align: center;
+
+			&.selected {
+				background: #efefef;
+			}
+
+			&:hover {
+				background: #efefef;
+				cursor: pointer;
+			}
+			&.disabled {
+				opacity: .7;
+			}
+		}
+	}
+
+}

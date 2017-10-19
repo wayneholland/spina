@@ -1,0 +1,74 @@
+/* .........................................................
+
+		Module.Overlay
+
+	@	Overlay styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+
+// /* .....................................
+// 	overlay global
+// ..................................... */
+// .overlay {
+// 	display: none;
+// 	position: absolute;
+// 	z-index: 9999999;
+// }
+
+// /* .....................................
+// 	overlay 1
+// ..................................... */
+// .overlay-1 {
+// }
+
+
+// /* .....................................
+// 	overlay close 1
+// ..................................... */
+// .overlay-close-1 {
+// 	display: block;
+// 	position: absolute;
+// }
+
+// /* .....................................
+// 	overlay blanket
+// ..................................... */
+// .overlay-blanket {
+// 	display: none;
+// 	z-index: 1;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	background: #fff;
+// 	opacity: .8;
+// }
+
+// /* .....................................
+// 	overlay custome (name)
+// ..................................... */
+// #overlay-name {
+// }
+
+#appointments-zoom {
+	height: 500px;
+	width: 500px;
+	left: 50% !important; 
+	margin-left: -250px !important;
+	@media screen and (max-width: 750px) {
+		&.is-active {
+			width: 100% !important;
+			top: 0 !important;
+			left: 0 !important;
+			margin-left: 0px !important;
+		}
+	}
+	iframe {
+		box-shadow: 0 0 10px #f1f1f1;
+	}
+}

@@ -1,0 +1,61 @@
+<header>
+
+  <div class="group">
+    <a href="#menu" class="nav-menu-trigger"></a>
+    <h1><a href="/" title="Home"><i class="icon-logo-dark"></i><span>Spina</span></a></h1>
+  	<nav class="nav-main">
+  		<ul class="group">
+        {% for link in linklists.navigation.links %}
+          {% if link.title == 'Floral' %}
+          <li class="relative nav-trigger">
+            <a class="nav-trigger-dropdown" href="{{ link.url }}">{{ link.title}}</a>
+            <ul class="nav-dropdown">
+              {% for link in linklists.floral.links %}
+                 <li>
+                   <a href="{{ link.url }}">{{ link.title}}</a>
+                 </li>
+               {% endfor %}
+             </ul>
+          </li>
+          {% elsif link.title == 'Bride' %}
+          <li class="relative nav-trigger">
+            <a class="nav-trigger-dropdown" href="{{ link.url }}">{{ link.title}}</a>
+            <ul class="nav-dropdown">
+              {% for link in linklists.bride.links %}
+                {% if link.title == 'FAQ' %}
+                  {% unless settings.bride_faq_01_question == blank and settings.bride_faq_01_answer == blank %}
+                    <li>
+                      <a href="{{ link.url }}">{{ link.title}}</a>
+                    </li>
+                  {% endunless %}
+                {% else %}
+                 <li>
+                   <a {% if link.url == '#appointments' %}data-modal-trigger="appointments-zoom"{% endif %} href="{{ link.url }}">{{ link.title}}</a>
+                 </li>
+                 {% endif %}
+               {% endfor %}
+             </ul>
+          </li>
+          {% else %}
+            <li>
+              <a href="{{ link.url }}">{{ link.title}}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+  		</ul>
+  	</nav>
+    <section class="cart-bar title-4">
+      {% unless settings.maintenance  %}
+        <a id="bag-count" href="/cart" data-count="{{ cart.item_count }}">{{ cart.item_count }}</a>
+      {% endunless %}
+    </section>
+  </div>
+
+  {% if page.title == 'Privacy Policy' or page.title == 'Delivery' or page.title == 'FAQ' or page.title == 'Terms of Service' %}
+    {% include 'nav.about' %}
+  {% endif %}
+
+  {% if collection.title == 'Services' %}
+    {% include 'nav.services' %}
+  {% endif %}
+</header>

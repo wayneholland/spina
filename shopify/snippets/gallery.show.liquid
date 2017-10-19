@@ -1,0 +1,65 @@
+<script>document.getElementsByTagName('body')[0].className+=' gallery';</script>
+{% for image in product.images %}
+  {% if image.position == 2 %}
+  {% assign featured_img = image.src | product_img_url: 'master' %}
+  {% endif %}
+{% endfor %}
+{% assign url = 'https://spinanyc.myshopify.com/products/' | append: handle %}
+
+<!-- Header -->
+<section class="ratio-16-9">
+  {% if product.type == 'Gallery' %}
+  <div class="center hgroup">
+    <h1 class="title-1 margin-bottom-medium">{{ product.title }}</h1>
+    <p class="inverse copy-1"><em>Photography by: {{ product.vendor }}</em></p>
+    <ul class="gallery-social margin-top-medium">
+      <li><a class="" href="mailto:?subject={{ product.title | url_encode}}body={{ url | url_encode }}"><i class="icon-mail"></i><span>Email</span></a>
+      <li><a class="popup" href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=Spina NYC {{ product.title | url_encode }}&amp;p[url]={{ url }}&amp;p[summary]={{ product.description | url_encode }}&amp;p[images][0]={{ featured_img }}"><i class="icon-facebook"></i><span>Facebook</span></a></li>
+      <li><a class="popup" href="//pinterest.com/pin/create/button/?media={{ featured_img }}&amp;description={{ product.description | url_encode }}" target="_blank"><i class="icon-pinterest"></i><span>Pinterest</span></a></li>
+      <li><a class="popup" href="https://twitter.com/intent/tweet?related=spinanyc&amp;url={{ url | url_encode }}&amp;hashtags=spinanyc&amp;text=Spina NYC Gallery" target="_blank"><i class="icon-twitter"></i><span>Twitter</span></a></li>
+    </ul>
+  </div>
+  {% endif %}
+
+  {% for image in product.images %}
+    {% if image.position == 2 %}
+      <div class="img" style="background-image: url({{ featured_img }});">
+    {% endif %}
+  {% endfor %}
+
+  <i class="icon-arrow-down" style="position: absolute; bottom: 20px; left: 50%; margin-left: -12px;"></i>
+</section>
+
+<!-- About -->
+<section id="gallery-container" class="row text-center">
+  <div class="gallery-text">
+      <h3 class="text-center title-3"><strong>{{ product.title }}</strong></h3>
+      <div class="copy-1 text-center">
+        {{ product.description }}
+      </div>
+  </div>
+  <p class="fixed"><i class="icon-arrow-down-gray margin-bottom-medium"></i></p>
+</section>
+
+<!-- Gallery -->
+<ul class="{% if product.type == 'Bridal Gallery' %}group gallery-bridal{% else %}gallery-list cover{% endif %}">
+  {% for image in product.images %}
+    {% if image.position > 2 %}
+      {% if product.type == 'Bridal Gallery' %}
+        <li class="gallery-item" data-modal-trigger="gallery-zoom"><img src="{{ image.src | product_img_url: 'master' }}" alt="" /></li>
+      {% else %}
+        <li class="gallery-item" data-modal-trigger="gallery-zoom"><img src="{{ image.src | product_img_url: 'large' }}" style="background-image: url('{{ image.src | product_img_url: 'large' }}');"></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<div id="gallery-zoom" class="overlay" data-modal>
+  <div class="content"></div>
+  {% if product.type == 'Bridal Gallery' %}
+  <div class="text-center" style="position: absolute; bottom: -50px; width: 100%;">
+    <a class="title-3 underline" data-modal-trigger="appointments-zoom" href="#">Inquire</a>
+  </div>
+  {% endif %}
+  <a href="#" class="icon-close-black" data-modal-close>Close it</a>
+</div>

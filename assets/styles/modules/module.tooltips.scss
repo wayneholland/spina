@@ -1,0 +1,38 @@
+.tooltip {
+  background: #000;
+  padding: 20px;
+  position: relative;
+  @include transition(opacity, 200ms, ease);
+
+  &:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-right-color: #000000;
+    border-width: 20px;
+    margin-top: -20px;
+  }
+
+  &.is-hidden {
+    position: absolute;
+    top: 0;
+    left: -99999px;
+    opacity: 0;
+  }
+  &.is-active {
+    opacity: 1;
+  }
+  &#outside-delivery {
+    position: absolute;
+    top: 0;
+    width: 333px;
+    left: 190px;
+    z-index: 1000000;
+  }
+}

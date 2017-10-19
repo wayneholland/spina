@@ -1,0 +1,132 @@
+/* .........................................................
+
+	Global Mixin
+
+	@ 	Sets up style globals
+	@	by Arishill Co. (arishill.com)
+	@	Updated April 2013
+
+......................................................... */
+
+/* .....................................
+	font families
+..................................... */
+$font-1-reg: "europa", Calibri, sans-serif;
+$font-2: "adobe-garamond-pro","Garamond Regular", 'Times New Roman', Times, serif;
+
+/* .....................................
+	grid variables
+..................................... */
+$base-width-halves: 100%/2;
+$base-width-thirds: 100%/3;
+$base-width-fourths: 100%/4;
+$base-width-fifths: 100%/5;
+$base-width-sixths: 100%/6;
+$base-width-sevenths: 100%/7;
+$base-width-eigths: 100%/8;
+$base-width-twelfths: 100%/12;
+$base-width-sixteenths: 100%/16;
+$page-width: 1024px;
+
+$gutter-0-5: .5%;
+$gutter-1: 1%;
+$gutter-1-5: 1.5%;
+$gutter-2: 2%;
+$gutter-2-5: 2.5%;
+$gutter-3: 3%;
+$gutter-3-5: 3.5%;
+$gutter-4: 4%;
+$gutter-4-5: 4.5%;
+$gutter-5: 5%;
+
+@mixin grid($width) {
+	float: left;
+	width: $width;
+
+	/* .....................................
+		grid gutters
+	..................................... */
+	&.gtr-0-5 { width: $width - (2*$gutter-0-5); margin: 0 $gutter-0-5; }
+	&.gtr-1 { width: $width - (2*$gutter-1); margin: 0 $gutter-1; }
+	&.gtr-1-5 { width: $width - (2*$gutter-1-5); margin: 0 $gutter-1-5; }
+	&.gtr-2 { width: $width - (2*$gutter-2); margin: 0 $gutter-2; }
+	&.gtr-2-5 { width: $width - (2*$gutter-2-5); margin: 0 $gutter-2-5; }
+	&.gtr-3 { width: $width - (2*$gutter-3); margin: 0 $gutter-3; }
+	&.gtr-3-5 { width: $width - (2*$gutter-3-5); margin: 0 $gutter-3-5; }
+	&.gtr-4 { width: $width - (2*$gutter-4); margin: 0 $gutter-4; }
+	&.gtr-4-5 { width: $width - (2*$gutter-4-5); margin: 0 $gutter-4-5; }
+	&.gtr-5 { width: $width - (2*$gutter-5); margin: 0 $gutter-5; }
+
+	&.l-gtr-0-5 { width: $width - $gutter-0-5; margin-left: $gutter-0-5; }
+	&.l-gtr-1 { width: $width - $gutter-1; margin-left: $gutter-1; }
+	&.l-gtr-1-5 { width: $width - $gutter-1-5; margin-left: $gutter-1-5; }
+	&.l-gtr-2 { width: $width - $gutter-2; margin-left: $gutter-2; }
+	&.l-gtr-2-5 { width: $width - $gutter-2-5; margin-left: $gutter-2-5; }
+	&.l-gtr-3 { width: $width - $gutter-3; margin-left: $gutter-3; }
+	&.l-gtr-3-5 { width: $width - $gutter-3-5; margin-left: $gutter-3-5; }
+	&.l-gtr-4 { width: $width - $gutter-4; margin-left: $gutter-4; }
+	&.l-gtr-4-5 { width: $width - $gutter-4-5; margin-left: $gutter-4-5; }
+	&.l-gtr-5 { width: $width - $gutter-5; margin-left: $gutter-5; }
+
+	&.r-gtr-0-5 { width: $width - $gutter-0-5; margin-right: $gutter-0-5; }
+	&.r-gtr-1 { width: $width - $gutter-1; margin-right: $gutter-1; }
+	&.r-gtr-1-5 { width: $width - $gutter-1-5; margin-right: $gutter-1-5; }
+	&.r-gtr-2 { width: $width - $gutter-2; margin-right: $gutter-2; }
+	&.r-gtr-2-5 { width: $width - $gutter-2-5; margin-right: $gutter-2-5; }
+	&.r-gtr-3 { width: $width - $gutter-3; margin-right: $gutter-3; }
+	&.r-gtr-3-5 { width: $width - $gutter-3-5; margin-right: $gutter-3-5; }
+	&.r-gtr-4 { width: $width - $gutter-4; margin-right: $gutter-4; }
+	&.r-gtr-4-5 { width: $width - $gutter-4-5; margin-right: $gutter-4-5; }
+	&.r-gtr-5 { width: $width - $gutter-5; margin-right: $gutter-5; }
+
+}
+
+/* .....................................
+	css3 mixins
+..................................... */
+@mixin box-shadow($h,$v,$blur,$spread,$color) {
+	-webkit-box-shadow: $h $v $blur $spread $color;
+	-moz-box-shadow: $h $v $blur $spread $color;
+	box-shadow: $h $v $blur $spread $color;
+}
+@mixin box-inset($h,$v,$blur,$spread,$color) {
+	-webkit-box-shadow: inset $h $v $blur $spread $color;
+	-moz-box-shadow: inset $h $v $blur $spread $color;
+	box-shadow: inset $h $v $blur $spread $color;
+}
+
+@mixin box-size($sizing) {
+	box-sizing: $sizing;
+	-webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+}
+
+@mixin text-shadow($h,$v,$blur,$color) {
+	text-shadow: $h $v $blur $color;
+	filter: dropshadow(color=$color, offx=$h, offy=$v);
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin gradient($h,$v,$blur,$spread,$color) {
+	-webkit-box-shadow: $h $v $blur $spread $color;
+	-moz-box-shadow: $h $v $blur $spread $color;
+	box-shadow: $h $v $blur $spread $color;
+}
+
+@mixin transition($property, $speed, $easing) {
+	transition: $property $speed $easing;
+	-moz-transition: $property $speed $easing;
+	-webkit-transition: $property $speed $easing;
+	-o-transition: $property $speed $easing;
+}
+
+@mixin box-sizing($size) {
+	-moz-box-sizing: $size;
+	-webkit-box-sizing: $size;
+	box-sizing: $size;
+}

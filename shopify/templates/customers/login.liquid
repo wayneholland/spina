@@ -1,0 +1,56 @@
+{% assign reset_form_errors = false %}
+
+<div data-component="auth" class="text-middle">
+    <section class="form fill-width text-center small-only-padding-medium padding-large {% unless form.errors %}is-hidden{% endunless %}" data-component="reset">
+      {% form 'recover_customer_password' %}
+        <h2 class="head-3 text--black small-only-padding-top-small padding-top-xxlarge">Password Reset</a></h2>
+
+        {% if form.errors %}
+          {% assign reset_form_errors = true %}
+          <div data-prop="errors" class="margin-vert-large border border-all border-red text--red text-4">
+            {{ form.errors | default_errors }}
+          </div>
+        {% endif %}
+
+        {% if form.posted_successfully? %}
+          <p class="text--green text-4">Check your email for instructions to reset your password.</p>
+        {% endif %}
+
+        <fieldset class="small-centered small-1-1 medium-1-3 large-1-4 margin-top-large margin-bottom-medium">
+          <input type="email" name="customer[email]" placeholder="Type your email" class="fill-width text-center">
+        </fieldset>
+
+        <fieldset class="small-centered padding-horz small-1-1 medium-1-3 large-1-8 margin-top-xlarge">
+          <input type="submit" value="Send It" class="btn-black btn--medium btn--wide">
+          <a href="#" class="block margin-top-medium text--gray text-4 has-decoration" data-state="accounts.login">Cancel</a>
+        </fieldset>
+      {% endform %}
+    </section>
+
+    <section class="form fill-width text-center small-only-padding-medium padding-large {% if reset_form_errors %}is-hidden{% endif %}" data-component="login">
+      {% form 'customer_login' %}
+        <h2 class="head-3 text--black small-only-padding-top-small padding-top-xxlarge">Sign in or <a href="/account/register" class="text--gray has-decoration">Create an account</a></h2>
+
+        {% if form.errors %}
+          <div data-prop="errors" class="margin-vert-large border border-all border-red text--red text-4">
+            {{ form.errors | default_errors }}
+          </div>
+        {% endif %}
+
+        <fieldset class="small-centered small-1-1 medium-1-3 large-1-4 margin-top-large margin-bottom-medium">
+          <input type="email" name="customer[email]" placeholder="Email Address" class="fill-width text-center">
+        </fieldset>
+
+        <fieldset class="small-centered small-1-1 medium-1-3 large-1-4">
+          <input type="password" name="customer[password]"  placeholder="Password" class="fill-width text-center">
+        </fieldset>
+
+        <fieldset class="small-centered padding-horz-large small-1-1 medium-1-3 large-1-8 margin-top-xlarge">
+          <input type="submit" value="Sign In" class="btn-black btn--medium btn--wide">
+          <a href="#" class="block margin-top-medium text--gray text-4 has-decoration" data-state="accounts.reset">Forgot Your Password</a>
+        </fieldset>
+      {% endform %}
+  </section>
+
+
+</div>

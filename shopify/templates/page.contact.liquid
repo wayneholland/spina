@@ -1,0 +1,94 @@
+<section id="contact" class="square-blocks">
+  <div id="spina-events" class="row">
+    <div class="col ratio-1-1 relative">
+      <img src="{{ 'contact-events.jpg' | asset_url }}" style="background-image: url('{{ 'contact-events.jpg' | asset_url }}');">
+    </div>
+    <div class="col ratio-1-1 relative">
+      <div class="centered-row-top border-bottom">
+        <div class="centered">
+          <div class="centered-item title-3">
+            <h5><span>Spina Events</span></h5>
+            <p class="address">
+              {{ shop.address.address1 }} <br>
+              {{ shop.address.city }} {{ shop.address.province_code }} {{ shop.address.zip }}
+            </p>
+            <p class="tel">{{ settings.events_phone }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="centered-row-bottom relative">
+        <div class="centered">
+          <div class="centered-item title-3">
+            <h5><span>Floral &amp; Event <br> Consultations</span></h5>
+            <p>{{ settings.consultation_hours }}</p>
+            <p class="tel">{{ settings.events_phone }}</p>
+            <span><a href="mailto:{{ settings.info_email }}?subject=Spina Consultation Inquiry" class="no-underline">Contact Us</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="spina-bride" class="row">
+    <div class="col ratio-1-1 relative">
+      <div class="centered-row-top border-bottom">
+        <div class="centered">
+          <div class="centered-item title-3">
+            <h5><span>Spina Bride</span></h5>
+            <p class="address">
+              {{ shop.address.address1 }} <br>
+              {{ shop.address.city }} {{ shop.address.province_code }} {{ shop.address.zip }}
+            </p>
+            <p class="tel">{{ settings.bride_phone }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="centered-row-bottom relative">
+        <div class="centered">
+          <div class="centered-item title-3">
+            <h5><span>Bridal Gown &amp; <br>Accessories Consultations</span></h5>
+            <p>{{ settings.bride_consultation_hours }}</p>
+            <p class="tel">{{ settings.bride_phone }}</p>
+            <span><a data-modal-trigger="appointments-zoom" href="#" class="no-underline copy-small">Reserve Now</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col ratio-1-1 relative">
+      <img src="{{ 'contact-bride.jpg' | asset_url }}" style="background-image: url('{{ 'contact-bride.jpg' | asset_url }}');">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col ratio-1-1 relative" style="background-color: #f1f1f1;">
+      <div class="mapIt" id="map" data-zoom="16" data-grayscale="true" data-lat="{{ settings.map_latitude }}" data-lng="{{ settings.map_longitude }}" data-marker="true" data-icon="{{ 'bride-logo-map.svg' | asset_url }}"></div>
+    </div>
+    <div class="col ratio-1-1 relative">
+      <div class="centered-row-top border-bottom">
+        <div class="centered">
+          <div class="centered-item title-3">
+            <h5><span>Follow Spina Events</span></h5>
+            <ul>
+              <li><a href="{{ settings.facebook_url }}" target="_blank" class="copy-small no-underline">Facebook</a></li>
+              <li><a href="{{ settings.instagram_url }}" target="_blank" class="copy-small no-underline">Instagram</a></li>
+              <li><a href="{{ settings.twitter_url }}" target="_blank" class="copy-small no-underline">Twitter</a></li>
+              <li><a href="{{ settings.pinterest_url }}" target="_blank" class="copy-small no-underline">Pinterest</a></li>
+              <li><a href="{{ settings.wedding_wire_url }}" target="_blank" class="copy-small no-underline">Wedding Wire</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="centered-row-bottom relative">
+        <div class="centered">
+          <div class="centered-item title-3">
+            <h5><span>Follow Spina Bride</span></h5>
+            <ul>
+              <li><a href="{{ settings.bride_facebook_url }}" target="_blank" class="copy-small no-underline">Facebook</a></li>
+              <li><a href="{{ settings.bride_instagram_url }}" target="_blank" class="copy-small no-underline">Instagram</a></li>
+              <li><a href="{{ settings.bride_twitter_url }}" target="_blank" class="copy-small no-underline">Twitter</a></li>
+              <li><a href="{{ settings.bride_pinterest_url }}" target="_blank" class="copy-small no-underline">Pinterest</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

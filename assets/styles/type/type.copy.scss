@@ -1,0 +1,100 @@
+/* .........................................................
+
+		Type.Copy
+
+	@	Copy styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+/* .....................................
+	copy 1
+..................................... */
+.copy-1 {
+	font-size: 15px;
+	line-height: 21px;
+	font-family: $font-2;
+
+	color: #666;
+
+	em {
+		font-style: italic;
+	}
+	strong {
+		font-weight: bold;
+	}
+
+	&:link,
+	a:link,
+	&:visited,
+	a:visited {
+
+	}
+
+	&:hover,
+	a:hover,
+	&:active,
+	a:active {
+
+	}
+	&.inverse {
+		color: #fff;
+	}
+}
+.no-underline {
+	text-decoration: none !important;
+}
+
+/* .....................................
+	copy 2
+..................................... */
+.copy-small {
+	font-size: 11px;
+}
+.copy-2 {
+	font-size: 10px;
+	letter-spacing: 3px;
+	font-family: $font-1-reg;
+	color: #666;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: left;
+
+	line-height: 21px;
+
+	color: #666;
+
+	em {
+		font-style: italic;
+	}
+	strong {
+		font-weight: bold;
+	}
+
+	&:link,
+	a:link,
+	&:visited,
+	a:visited {
+		color: #666;
+		text-decoration: none;
+	}
+
+	&:hover,
+	a:hover,
+	&:active,
+	a:active {
+		color: #000;
+		text-decoration: none;
+	}
+}
+.text-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.text-center {
+	text-align: center !important;
+}

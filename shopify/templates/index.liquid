@@ -1,0 +1,96 @@
+<div class="feature-scroll loading">
+  <section class="feature-section first">
+    <div class="feature-head">
+      <ul class="slideshow fadein">
+        {% unless settings.slide_01 == blank %}
+        <li class="active is-top">
+          <a class="img" href="{{ settings.slide_01 }}" style="background-image: url({{ 'home-slide-01.jpg' | asset_url }});"></a>
+        </li>
+        {% endunless %}
+        {% unless settings.slide_02 == blank %}
+        <li>
+          <a class="img" href="{{ settings.slide_02 }}" style="background-image: url({{ 'home-slide-02.jpg' | asset_url }});"></a>
+        </li>
+        {% endunless %}
+        {% unless settings.slide_03 == blank %}
+        <li>
+          <a class="img" href="{{ settings.slide_03 }}" style="background-image: url({{ 'home-slide-03.jpg' | asset_url }});"></a>
+        </li>
+        {% endunless %}
+        {% unless settings.slide_04 == blank %}
+        <li>
+          <a class="img" href="{{ settings.slide_04 }}" style="background-image: url({{ 'home-slide-04.jpg' | asset_url }});"></a>
+        </li>
+        {% endunless %}
+        {% unless settings.slide_05 == blank %}
+        <li>
+          <a class="img" href="{{ settings.slide_05 }}" style="background-image: url({{ 'home-slide-05.jpg' | asset_url }});"></a>
+        </li>
+        {% endunless %}
+      </ul>
+
+      <nav class="slideshow-nav">
+      </nav>
+    </div>
+    <div class="feature-board row">
+      <ul class="group col-1-2">
+        <li class="item-2-2 left top">
+          <a href="{{ settings.grid_top_left_link }}">
+            <img src="{{ 'grid-top-left.jpg' | asset_url }}" />
+            <span class="item-desc">
+              <span class="title-3">
+                <em>{{ settings.grid_top_left_header }}</em>
+                <span>{{ settings.grid_top_left_subtext }}</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="item-1-1 left bottom">
+          <a href="{{ settings.grid_bottom_left_link }}">
+            <img src="{{ 'grid-bottom-left.jpg' | asset_url }}" />
+          </a>
+        </li>
+        <li class="item-1-1 left bottom offset">
+          <a href="{{ settings.grid_bottom_left_link }}">
+            <img src="{{ 'grid-bottom-left.jpg' | asset_url }}" />
+            <span class="item-desc compliment">
+              <span class="title-3">
+                <em>{{ settings.grid_bottom_left_header }}</em>
+                <span>{{ settings.grid_bottom_left_subtext }}</span>
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <ul class="group col-1-2">
+        <li class="item-1-1 right top offset">
+          <a href="{{ settings.grid_top_right_link }}">
+            <img src="{{ 'grid-top-right.jpg' | asset_url }}" />
+            <span class="item-desc compliment">
+              <span class="title-3">
+                <em>{{ settings.grid_top_right_header }}</em>
+                <span>{{ settings.grid_top_right_subtext }}</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="item-1-1 right top">
+          <a href="{{ settings.grid_top_right_link }}">
+            <img src="{{ 'grid-top-right.jpg' | asset_url }}" />
+          </a>
+        </li>
+        <li class="item-2-2 right bottom">
+          <a href="{{ settings.grid_bottom_right_link }}">
+            <img src="{{ 'grid-bottom-right.jpg' | asset_url }}" />
+            <span class="item-desc">
+              <span class="title-3">
+                <em>{{ settings.grid_bottom_right_header }}</em>
+                <span>{{ settings.grid_bottom_right_subtext }}</span>
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>

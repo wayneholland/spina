@@ -1,0 +1,81 @@
+<script>document.getElementsByTagName('body')[0].className+=' product';</script>
+<section class="product row">
+	<ul class="col-1-2 product-gallery">
+    {% for image in product.images %}
+    <li {% if forloop.last %}class="fixed-stop"{% endif %}>
+      <a href="#" data-scroll="gallery-{% if forloop.last %}0{% else %}{{ forloop.index }}{% endif %}">
+        <img id="gallery-{{ forloop.index0 }}" src="{{ image.src | product_img_url: '1000x1000'}}" alt="{{ product.title }}" />
+      </a>
+    </li>
+    {% endfor %}
+	</ul>
+
+	<div class="product-details fixed-target">
+    <h2 class="title-3"><strong>{{ product.title }}</strong></h2>
+    <div class="product-desc copy-1">{{ product.description }}</div>
+
+    {% if product.compare_at_price > product.price %}
+      {% assign has_sale = true %}
+    {% else %}
+      {% assign has_sale = false %}
+    {% endif %}
+
+    {% if has_sale %}
+      {% unless product.compare_at_price_varies %}
+        <span class="product-price title-3"><strong>{{ product.price | money_without_trailing_zeros }}</strong></span>
+        <span class="product-price title-3 sale"><strong>Sale {{ product.compare_at_price | money_without_trailing_zeros }}</strong></span>
+      {% endunless %}
+    {% else %}
+      {% unless product.price_varies %}
+        <span class="product-price title-3"><strong>{{ product.price | money_without_trailing_zeros }}</strong></span>
+      {% endunless %}
+    {% endif %}
+
+		{% unless settings.maintenance  %}
+	    <form id="add-to-bag" class="product-form copy-2" action="/cart/update/" method="post">
+	      {% if product.compare_at_price_varies or product.price_varies %}
+	      <div class="select">
+	        <a class="select-trigger" href="#">Choose {{ product.options[0] }}</a>
+	        <ul class="select-drop">
+	        {% for variant in product.variants %}
+	          <li><a href="#" data-target="item_id" data-value="{{ variant.id }}"><strong>{{ variant.title }}</strong> <span>/</span> {% if has_sale %}{{ variant.compare_at_price | money }}{% else %}{{ variant.price | money }}{% endif %}</a></li>
+	        {% endfor %}
+	        </ul>
+	        <input type="hidden" id="item_id" name="item_id" value="" />
+	      </div>
+	      {% else %}
+	      <input type="hidden" name="item_id" value="{{ product.selected_or_first_available_variant.id }}" />
+	      {% endif %}
+	      <input type="hidden" name="method" value="add" />
+	      <input type="hidden" name="item_quantity" value="1" />
+	      <input type="hidden" name="location" value="/products/{{ product.handle }}" />
+	      <input type="submit" value="Add to Bag" class="btn-1 btn btn-mid">
+	    </form>
+		{% else %}
+			<p class="copy-1" style="background: #ffd5a7; border: 1px solid #d08739; padding: 15px;">Our apologies, due to high demand we are currently not taking any new orders for delivery.</p>
+		{% endunless %}
+
+    <nav class="product-nav copy-2">
+      <div class="nav-init">
+        <a href="#" data-target="nav-social">Share</a>
+        <a href="#" data-target="nav-help">Need Help?</a>
+      </div>
+
+      <ul class="social" id="nav-social">
+        {% assign title = product.title | url_encode %}
+        {% assign body = product.handle %}
+        {% assign img = product.featured_image | product_img_url: '1000x1000' %}
+        <li><a href="//www.pinterest.com/pin/create/button/?url=http://spinanyc.com/products/{{ body }}&media={{ img }}&description={{ title }}" data-pin-do="buttonPin" data-pin-config="none" data-pin-color="white"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png" /></a><script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script></li>
+        <li><iframe src="//www.facebook.com/plugins/like.php?href=http://spinanyc.com/products/{{ body }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe></li>
+      </ul>
+      <ul class="help" id="nav-help">
+        <li><a href="/pages/delivery">Delivery</a></li>
+        <li><a href="/pages/faq">FAQ</a></li>
+        <li><a href="/pages/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+	</div>
+
+  <div class="product-absolute-clone"></div>
+  <div class="product-fixed-clone"></div>
+</section>

@@ -1,0 +1,244 @@
+<section id="faqs">
+  <div class="banner group">
+    <span style="background-image: url({{ 'spina-4-2.jpg' | asset_url }});"></span>
+    <span style="background-image: url({{ 'spina-21-2.jpg' | asset_url }});"></span>
+    <span style="background-image: url({{ 'spina-13-2.jpg' | asset_url }});"></span>
+    <span style="background-image: url({{ 'spina-20-2.jpg' | asset_url }});"></span>
+  </div>
+  <div class="contain">
+    <div class="group margin-vert-large">
+      <ul class="col-1-2 gtr-2">
+        {% unless settings.faq_01_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_01_question | handleize}}"><strong>{{ settings.faq_01_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_02_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_02_question | handleize}}"><strong>{{ settings.faq_02_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_03_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_03_question | handleize}}"><strong>{{ settings.faq_03_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_04_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_04_question | handleize}}"><strong>{{ settings.faq_04_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_05_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_05_question | handleize}}"><strong>{{ settings.faq_05_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_06_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_06_question | handleize}}"><strong>{{ settings.faq_06_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_07_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_07_question | handleize}}"><strong>{{ settings.faq_07_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_08_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_08_question | handleize}}"><strong>{{ settings.faq_08_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_17_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_17_question | handleize}}"><strong>{{ settings.faq_17_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_18_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_18_question | handleize}}"><strong>{{ settings.faq_18_question }}</strong></a></li>
+        {% endunless %}
+      </ul>
+      <ul class="col-1-2 gtl-2">
+        {% unless settings.faq_09_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_09_question | handleize}}"><strong>{{ settings.faq_09_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_10_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_10_question | handleize}}"><strong>{{ settings.faq_10_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_11_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_11_question | handleize}}"><strong>{{ settings.faq_11_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_12_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_12_question | handleize}}"><strong>{{ settings.faq_12_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_13_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_13_question | handleize}}"><strong>{{ settings.faq_13_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_14_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_14_question | handleize}}"><strong>{{ settings.faq_14_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_15_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_15_question | handleize}}"><strong>{{ settings.faq_15_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_16_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_16_question | handleize}}"><strong>{{ settings.faq_16_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_19_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_19_question | handleize}}"><strong>{{ settings.faq_19_question }}</strong></a></li>
+        {% endunless %}
+        {% unless settings.faq_20_question == blank %}
+          <li><a class="title-3 no-underline text-left" href="#" data-scroll="{{ settings.faq_20_question | handleize}}"><strong>{{ settings.faq_20_question }}</strong></a></li>
+        {% endunless %}
+      </ul>
+    </div>
+    <ul class="answers">
+      {% unless settings.faq_01_question == blank %}
+        <li id="{{ settings.faq_01_question | handleize}}">
+          <h4 class="title-3"><strong>{{ settings.faq_01_question }}</strong></h4>
+          <div class="copy-1 text-center">
+            {{ settings.faq_01_answer }}
+          </div>
+        </li>
+      {% endunless %}
+    {% unless settings.faq_02_question == blank %}
+      <li id="{{ settings.faq_02_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_02_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_02_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_03_question == blank %}
+      <li id="{{ settings.faq_03_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_03_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_03_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_04_question == blank %}
+      <li id="{{ settings.faq_04_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_04_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_04_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_05_question == blank %}
+      <li id="{{ settings.faq_05_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_05_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_05_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_06_question == blank %}
+      <li id="{{ settings.faq_06_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_06_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_06_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_07_question == blank %}
+      <li id="{{ settings.faq_09_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_07_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_07_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_08_question == blank %}
+      <li id="{{ settings.faq_08_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_08_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_08_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_09_question == blank %}
+      <li id="{{ settings.faq_09_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_09_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_09_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_10_question == blank %}
+      <li id="{{ settings.faq_10_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_10_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_10_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_11_question == blank %}
+      <li id="{{ settings.faq_11_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_11_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_11_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_12_question == blank %}
+      <li id="{{ settings.faq_12_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_12_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_12_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_13_question == blank %}
+      <li id="{{ settings.faq_13_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_13_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_13_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_14_question == blank %}
+      <li id="{{ settings.faq_14_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_14_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_14_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_15_question == blank %}
+      <li id="{{ settings.faq_15_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_15_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_15_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_16_question == blank %}
+      <li id="{{ settings.faq_16_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_16_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_16_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_17_question == blank %}
+      <li id="{{ settings.faq_17_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_17_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_17_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_18_question == blank %}
+      <li id="{{ settings.faq_18_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_18_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_18_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_19_question == blank %}
+      <li id="{{ settings.faq_19_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_19_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_19_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    {% unless settings.faq_20_question == blank %}
+      <li id="{{ settings.faq_20_question | handleize}}">
+        <h4 class="title-3"><strong>{{ settings.faq_20_question }}</strong></h4>
+        <div class="copy-1 text-center">
+          {{ settings.faq_20_answer }}
+        </div>
+      </li>
+    {% endunless %}
+    <li id="still-have-questions">
+      <h4 class="title-3"><strong>Still have questions?</strong></h4>
+      <div class="copy-1 text-center">
+        <a href="/about/contact#spina-events">Contact us</a>
+      </div>
+    </li>
+    </ul>
+  </div>
+</section>

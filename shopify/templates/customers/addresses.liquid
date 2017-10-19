@@ -1,0 +1,159 @@
+<div class="text-middle" data-component="address">
+  <section id="address-new" class="form padding-large fill-width is-hidden">
+    {% form 'customer_address', customer.new_address %}
+      <h2 class="head-3 text-center text--black padding-top-xlarge margin-bottom-large">Edit Address</h2>
+
+      <div class="row small-centered small-1-1 large-3-4 xxlarge-1-2">
+
+        <div class="col small-1-1 large-1-2 padding-right-small">
+          <fieldset class="margin-bottom-medium">
+            <input type="text" name="address[first_name]" placeholder="First Name" value="{{ form.first_name }}" class="fill-width">
+          </fieldset>
+        </div>
+        <div class="col small-1-1 large-1-2 padding-left-small">
+          <fieldset class="margin-bottom-medium">
+            <input type="text" name="address[last_name]" placeholder="Last Name" value="{{ form.last_name }}" class="fill-width">
+          </fieldset>
+        </div>
+
+        <div class="col small-1-1 large-1-2 padding-right-small">
+          <fieldset class="margin-bottom-medium">
+            <input type="text" name="address[company]" placeholder="Company" value="{{ form.company }}" class="fill-width">
+          </fieldset>
+        </div>
+        <div class="col small-1-1 large-1-2 padding-left-small">
+          <fieldset class="margin-bottom-medium">
+            <input type="text" name="address[address1]" placeholder="Address Line 1" value="{{ form.address1 }}" class="fill-width">
+          </fieldset>
+        </div>
+
+        <div class="col small-1-1 large-1-2 padding-right-small">
+          <fieldset class="margin-bottom-medium">
+            <input type="text" name="address[address2]" placeholder="Address Line 2" value="{{ form.address2 }}" class="fill-width">
+          </fieldset>
+        </div>
+        <div class="col small-1-1 large-1-2 padding-left-small">
+          <fieldset class="margin-bottom-medium">
+            <input type="text" name="address[city]" placeholder="City" value="{{ form.city }}" class="fill-width">
+          </fieldset>
+        </div>
+
+        <div class="col small-1-1 large-1-2 padding-right-small">
+          <fieldset class="margin-bottom-medium">
+            <select class="text-center fill-width" name="address[country]" id="address_country" data-default="{{form.country}}" placeholder="Country">{{ country_option_tags }}</select>
+          </fieldset>
+        </div>
+        <div class="col small-1-1 large-1-2 padding-left-small">
+          <fieldset class="margin-bottom-medium" id="address_province_container">
+            <select class="text-center fill-width" name="address[province]" data-default="{{form.province}}" id="address_province"></select>
+          </fieldset>
+        </div>
+
+        <div class="col small-1-1 large-1-2 padding-right-small">
+          <fieldset class="margin-bottom-medium">
+            <input type="text" name="address[zip]" placeholder="Postal Code" value="{{ form.zip }}" class="fill-width">
+          </fieldset>
+        </div>
+        <div class="col small-1-1 large-1-2 padding-left-small">
+          <fieldset class="margin-bottom-medium">
+            <input type="text" name="address[phone]" placeholder="Phone" value="{{ form.phone }}" class="fill-width">
+          </fieldset>
+        </div>
+
+        <div class="col small-1-1 text-center margin-top-medium padding-bottom-xlarge">
+          <div class="checkbox">
+            {{ form.set_as_default_checkbox }}
+            <label for="address_default_address_new">
+              <span class="checkbox--contain">
+                <span class="checkbox--icon"></span>
+              </span>
+              <span class="checkbox--label">Set as Default Address?</span>
+            </label>
+          </div>
+
+          <div data-prop="actions">
+            <input type="submit" value="Add Address" class="btn-black btn--wide btn--medium margin-top-large margin-bottom-medium">
+            <a href="/account" class="block margin-top-small text--gray text-4">or Cancel</a>
+            <a href="/account" class="block margin-top-small text--gray text-4">Back to Account</a>
+          </div>
+        </div>
+      </div>
+    {% endform %}
+  </section>
+
+  {% for address in customer.addresses %}
+    <section id="address-{{ forloop.index }}" class="form padding-large fill-width is-hidden">
+        {% form 'customer_address', address %}
+          <h2 class="head-3 text-center text--black padding-top-xlarge margin-bottom-large">Edit Address</h2>
+
+          <div class="row small-centered small-1-1 large-3-4 xxlarge-1-2">
+
+            <div class="col small-1-1 large-1-2 padding-right-small">
+              <fieldset class="margin-bottom-medium">
+                <input type="text" name="address[first_name]" placeholder="First Name" value="{{ address.first_name }}" class="fill-width">
+              </fieldset>
+            </div>
+            <div class="col small-1-1 large-1-2 padding-left-small">
+              <fieldset class="margin-bottom-medium">
+                <input type="text" name="address[last_name]" placeholder="Last Name" value="{{ address.last_name }}" class="fill-width">
+              </fieldset>
+            </div>
+
+            <div class="col small-1-1 large-1-2 padding-right-small">
+              <fieldset class="margin-bottom-medium">
+                <input type="text" name="address[company]" placeholder="Company" value="{{ address.company }}" class="fill-width">
+              </fieldset>
+            </div>
+            <div class="col small-1-1 large-1-2 padding-left-small">
+              <fieldset class="margin-bottom-medium">
+                <input type="text" name="address[address1]" placeholder="Address Line 1" value="{{ address.address1 }}" class="fill-width">
+              </fieldset>
+            </div>
+
+            <div class="col small-1-1 large-1-2 padding-right-small">
+              <fieldset class="margin-bottom-medium">
+                <input type="text" name="address[address2]" placeholder="Address Line 2" value="{{ address.address2 }}" class="fill-width">
+              </fieldset>
+            </div>
+            <div class="col small-1-1 large-1-2 padding-left-small">
+              <fieldset class="margin-bottom-medium">
+                <input type="text" name="address[city]" placeholder="City" value="{{ address.city }}" class="fill-width">
+              </fieldset>
+            </div>
+
+            <div class="col small-1-1 large-1-2 padding-right-small">
+              <fieldset class="margin-bottom-medium">
+                <select class="text-center fill-width" name="address[country]" id="address_country" data-default="{{address.country}}" placeholder="Country">{{ country_option_tags }}</select>
+              </fieldset>
+            </div>
+            <div class="col small-1-1 large-1-2 padding-left-small">
+              <fieldset class="margin-bottom-medium" id="address_province_container">
+                <select class="text-center fill-width" name="address[province]" data-default="{{address.province}}" id="address_province"></select>
+              </fieldset>
+            </div>
+
+            <div class="col small-1-1 large-1-2 padding-right-small">
+              <fieldset class="margin-bottom-medium">
+                <input type="text" name="address[zip]" placeholder="Postal Code" value="{{ address.zip }}" class="fill-width">
+              </fieldset>
+            </div>
+            <div class="col small-1-1 large-1-2 padding-left-small">
+              <fieldset class="margin-bottom-medium">
+                <input type="text" name="address[phone]" placeholder="Phone" value="{{ address.phone }}" class="fill-width">
+              </fieldset>
+            </div>
+
+            <div class="col small-1-1 text-center margin-top-medium padding-bottom-xlarge">
+              <div data-prop="actions">
+                <input type="submit" value="Update Address" class="btn-black btn--wide btn--medium margin-top-large margin-bottom-medium">
+                <a href="/account" class="block margin-top-small text--gray text-4">or Cancel</a>
+                <a href="/account" class="block margin-top-small text--gray text-4">Back to Account</a>
+              </div>
+            </div>
+
+          </div>
+        {% endform %}
+      </section>
+    {% endfor %}
+  </section>
+</div>

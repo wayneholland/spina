@@ -1,0 +1,197 @@
+/* .........................................................
+
+		Module.Product
+
+	@	Product styling
+	@	the Arishill Co. (arishill.com)
+	@	author Scott Robertson
+	@	Updated April 2013
+
+......................................................... */
+
+
+/* .....................................
+	product global
+..................................... */
+.product .product {
+	width: 100%;
+	position: relative;
+	margin-top: 65px;
+}
+
+/* .....................................
+	product details
+..................................... */
+.product-details {
+	position: fixed;
+	top: 30%;
+	margin: 0px 10% 0 60%;
+	width: 30%;
+
+	.product-price {
+		margin-bottom: 35px;
+	}
+}
+.product-fixed-clone {
+	position: fixed;
+	top: 30%;
+	height: 100px;
+	width: 1px;
+	visibility: hidden;
+	background: transparent;
+	right: 0;
+}
+.product-absolute-clone {
+	width: 1px;
+	visibility: hidden;
+	background: transparent;
+	position: absolute;
+	bottom: 0px;
+	height: 100px;
+	right: 0;
+}
+.product-details .title-3 {
+	text-align: left;
+}
+.product-desc {
+	padding: 15px 0 25px 0;
+	width: 100%;
+}
+
+/* .....................................
+	product form
+..................................... */
+.product-form  {
+	font-size: 12px;
+	position: relative;
+
+	.select-trigger {
+		display: inline-block;
+		margin: 5px 0 45px 0;
+		padding-bottom: 3px;
+		&:link,
+		&:visited {
+			color: #555;
+			border-bottom: 2px solid #ccc;
+		}
+		&:hover,
+		&:active, {
+			border-bottom: 2px solid #999;
+		}
+	}
+	.select-drop {
+		font-size: 10px;
+		position: absolute;
+		top: -15px;
+		left: -9999px;
+		z-index: 100;
+		background: #fff;
+		padding: 15px 0;
+		width: 225px;
+
+		@include box-shadow(0,0,5px,0,#ccc);
+		&.active {
+			left: -10px;
+		}
+		a {
+			display: block;
+			line-height: 24px;
+			padding: 0px 10px;
+		}
+		a:link,
+		a:visited {
+			color: #000;
+			text-decoration: none;
+			strong {
+				color: #000;
+			}
+		}
+		a:hover,
+		a:active {
+			background: #ccc;
+			text-decoration: none;
+		}
+		span {
+			font-size: 8px;
+		}
+
+		li {
+			margin: 0;
+			padding: 0;
+			line-height: 18px;
+		}
+	}
+	// margin: 20px 0;
+}
+
+/* .....................................
+	product social
+..................................... */
+.product-nav {
+	margin: 20px 0;
+
+	a {
+		line-height: 12px;
+		padding: 0 10px;
+	}
+	.nav-init {
+		a:first-child {
+			padding-left: 0;
+			border-right: 1px solid #666;
+		}
+	}
+
+	i.fa {
+		font-size: 18px;
+	}
+	ul.active {
+		opacity: 1;
+		position: static;
+		left: auto;
+		@include transition(opacity, .5s, ease);
+	}
+	ul {
+		padding: 20px 0;
+		opacity: 0;
+		position: absolute;
+		left: -9999999px;
+		@include transition(opacity, .5s, ease);
+
+		li:first-child,
+		li:first-child a {
+			padding-left: 0;
+			margin-right: 3px
+		}
+		li:last-child {
+			max-width: 200px;
+		}
+		&.social a {
+			border: none !important;
+			display: inline-block;
+		}
+		li {
+			display: inline-block;
+		}
+		&.help {
+			a {
+				border: none !important;
+			}
+			li {
+				height: 12px;
+				line-height: 12px;
+				border-right: 1px solid #666;
+			}
+			li:last-child {
+				border-right: none;
+			}
+		}
+	}
+}
+
+/* .....................................
+	product gallery
+..................................... */
+.product-gallery img {
+	width: 100%;
+	display: block;
+}

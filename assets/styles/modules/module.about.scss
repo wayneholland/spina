@@ -1,0 +1,141 @@
+#about,
+#delivery {
+  .mapIt {
+    margin-top: 115px;
+    width: 100%;
+    height: 500px;
+  }
+  .contain {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .is-hidden {
+    display: none;
+    opacity: 0;
+  }
+  .is-active  {
+    display: block;
+    opacity: 1;
+  }
+  .location-price {
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    @include transition(opacity, 200ms, ease);
+    span, strong {
+      display: inline-block;
+    }
+    [data-close] {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -7px;
+      &:hover {
+        opacity: .6;
+      }
+    }
+    .price {
+      padding-left: 20px;
+    }
+  }
+  .no-delivery {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+    @include box-sizing(border-box);
+    [data-outside-close] {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      margin-left: -7px;
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+  #delivery-check {
+    background: #fff;
+    position: absolute;
+    top: 245px;
+    left: 50%;
+    margin-left: -200px;
+    width: 300px;
+    text-align: center;
+    padding: 35px 35px 25px 35px;
+    z-index: 123;
+
+    input[type="text"] {
+      width: 200px;
+      margin: 15px auto;
+      display: block;
+      text-align: center;
+      padding: 10px 20px;
+      letter-spacing: 2px;
+
+      &::-webkit-input-placeholder { text-transform: uppercase; }
+      &::-moz-placeholder { text-transform: uppercase; } /* firefox 19+ */
+      &:-ms-input-placeholder {text-transform: uppercase;} /* ie */
+      &:-moz-placeholder { text-transform: uppercase; }
+    }
+
+    &:after {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-top-color: #ffffff;
+      border-width: 15px;
+      margin-left: -15px;
+    }
+  }
+}
+
+#faqs {
+  .banner {
+    margin-top: 115px;
+    width: 100%;
+    height: 250px;
+    background: #f1f1f1;
+    span {
+      display: block;
+      float: left;
+      width: 25%;
+      height: 100%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+  .group li {
+    min-height: 36px;
+    margin-bottom: 20px;
+    a {
+      line-height: 18px !important;
+    }
+  }
+  .contain {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    .answers li {
+      padding: 25px;
+      @include transition(background, 200ms, ease);
+      &.is-active {
+        background: #f1f1f1;
+      }
+    }
+  }
+}

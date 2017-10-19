@@ -1,0 +1,52 @@
+
+{% for item in cart.items %}
+	<li class="cart-item row {% if forloop.last %}fixed-stop{% endif %}">
+
+		<!-- item details -->
+		<div class="col-1-2 title-3">
+
+			<div class="cart-item-details group">
+
+				<hgroup>
+					<h3>{{ item.title }}</h3>
+					<!-- <h4></h4> -->
+					<h4>{{ item.variant.title}}</h5>
+				</hgroup>
+				<div class="cart-item-prices">
+
+					{{ item.quantity }} @ {{item.price | money }} <br> Item Total: {{ item.line_price | money }}
+				</div>
+
+				<div class="cart-item-actions">
+
+					<!-- add -->
+					<form action="#" method="post" class="cart-item-add">
+						<!-- <input type="hidden" name="method" value="add" />
+						<input type="hidden" name="title" value="{{ item.title }}" /> -->
+						<input type="hidden" name="item_id" value="{{ item.id }}">
+						<input type="hidden" name="item_quantity" value="{{ item.quantity }}">
+						<!-- <input type="hidden" name="location" value="{{ item.handle }}" /> -->
+						<input type="submit" class="title-3 strong" value="Add Another">
+					</form>
+
+					<!-- remove -->
+					<form action="#" method="post" class="cart-item-remove">
+						<input type="hidden" name="item_id" value="{{ item.id }}">
+						<!--<input type="hidden" name="location" value="{{ item.handle }}" /> -->
+						<input type="submit" class="title-3 strong" value="Remove">
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- item image -->
+		<div class="col-1-2 cart-item-image">
+			{{ item.image | product_img_url: '1000x1000' | img_tag }}
+		</div>
+
+	</li>
+
+{% endfor %}

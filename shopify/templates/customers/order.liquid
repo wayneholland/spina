@@ -1,0 +1,83 @@
+<div class="padding-large small-centered small-1-1 large-3-4 xxlarge-2-3" data-component="order">
+
+  <h2 class="head-3 text--black padding-top-xlarge text-center">Account Details / Order History</h2>
+
+  <div class="row margin-top-large">
+
+    <section data-component="details" class="col small-1-1 large-2-3 padding-right-large">
+      <h4 class="text-2 text--black margin-top-large margin-bottom-xsmall">{{ order.order_num }}</h4>
+      <p class="text-3 text--gray">{{ order.created_at }}</p>
+
+      <table class="margin-top-large fill-width">
+        <thead>
+          <tr>
+            <th class="text-left text-2 text--bold small-1-1 medium-10-16 padding-bottom-small">Item</th>
+            <th class="text-right text-2 text--bold small-1-1 medium-2-16 padding-bottom-small">Price</th>
+            <th class="text-right text-2 text--bold small-1-1 medium-2-16 padding-bottom-small">Qty</th>
+            <th class="text-right text-2 text--bold small-1-1 medium-2-16 padding-bottom-small">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for line_item in order.line_items %}
+          <tr>
+            <td class="padding-top-small padding-bottom-medium text-left">
+              <a href="{{ line_item.product.url }}" class="text--gray">
+                <span class="text--bold">{{ line_item.vendor }}</span>
+                <span class="text--gray">{{ line_item.title }} {{ line_item.variant }}</span>
+              </a>
+            </td>
+            <td class="padding-top-xsmall {% unless forloop.last == true %}padding-bottom-medium{% endunless %} text--gray text--bold text-right">{{ line_item.price | money }}</td>
+            <td class="padding-top-xsmall {% unless forloop.last == true %}padding-bottom-medium{% endunless %} text--gray text--bold text-right">{{ line_item.quantity }}</td>
+            <td class="padding-top-xsmall {% unless forloop.last == true %}padding-bottom-medium{% endunless %} text--gray text--bold text-right">{{ line_item.line_price | money }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        <tbody>
+          <tr class="border border--top">
+            <td colspan="3" class="padding-top-medium text--black text--bold">Subtotal</span></td>
+            <td class="padding-top-medium text--gray text--bold text-right">{{ order.subtotal_price }}</td>
+          </tr>
+          {% for tax_line in order.tax_lines %}
+            <tr>
+              <td colspan="3" class="padding-top-xsmall text--black text--bold">Tax ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)</td>
+              <td class="padding-top-xsmall text--gray text--bold text-right">{{ tax_line.price | money }}</td>
+            </tr>
+          {% endfor %}
+          <tr>
+            <td colspan="3" class="padding-top-xsmall text--black text--bold">Shipping</span></td>
+            <td class="padding-top-xsmall text--gray text--bold text-right">{{ order.shipping_price }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="padding-top-xsmall text--black text--bold">Total</span></td>
+            <td class="padding-top-xsmall text--gray text--bold text-right">{{ order.total_price }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section data-component="addresses" class="col small-1-1 large-1-3 padding-left-large">
+      <h4 class="text-2 text--black margin-top-large margin-bottom-small">Billing Address</h4>
+      <div class="text-3 text--gray">
+        Payment Status: {{ order.financial_status }}
+        <p>
+          {{ order.billing_address.company }}<br>
+          {{ order.billing_address.street }}<br>
+          {{ order.billing_address.city }}, {{ order.billing_address.province_code }}<br>
+          {{ order.billing_address.country_code }}
+        </p>
+      </div>
+
+      <h4 class="text-2 text--black margin-top-large margin-bottom-small">Shipping Address</h4>
+      <div class="text-3 text--gray">
+        Fulfillment Status: {{ order.fulfillment_status }}
+        <p>
+          {{ order.shipping_address.company }}<br>
+          {{ order.shipping_address.street }}<br>
+          {{ order.shipping_address.city }}, {{ order.shipping_address.province_code }}<br>
+          {{ order.shipping_address.country_code }}
+        </p>
+      </div>
+    </section>
+
+  </div>
+</div>

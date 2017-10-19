@@ -1,0 +1,11 @@
+.select {
+  .select-drop {
+    opacity: 0;
+    @include transition(opacity, .1s, ease);
+
+    &.active {
+      opacity: 1;
+      @include transition(opacity, .1s, ease);
+    }
+  }
+}

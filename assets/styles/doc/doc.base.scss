@@ -1,0 +1,99 @@
+/* .....................................
+
+	Doc.Base
+
+@   Base styling for site
+@   the Arishill Co. (arishill.com)
+@   author Scott Robertson
+@   Updated April 2013
+
+..................................... */
+
+
+/* .....................................
+    base
+..................................... */
+	html {
+		min-height: 100%;
+		height: auto !important;
+		position: relative;
+	}
+	body {
+		-webkit-backface-visibility: hidden;
+		font: normal 62.5%/1.75em $font-1-reg;
+		color: #666666;
+		font-size-adjust:0.508;
+		font-weight:normal;
+		font-style:normal;
+		margin-bottom: 225px;
+		position: static !important;
+		height: auto !important;
+	}
+	html .wrap,
+	html footer {
+		-webkit-transition: opacity 200ms ease-out;
+	  -moz-transition: opacity 200ms ease-out;
+	  -o-transition: opacity 200ms ease-out;
+	  transition: opacity 200ms ease-out;
+	  opacity: 1;
+	}
+	html .page-loader {
+  position: fixed;
+  -webkit-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  -o-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+html .page-loader,
+html.wf-active .page-loader,
+html.is-loaded .page-loader {
+  z-index: -10;
+  opacity: 0;
+}
+	html.fadeout .wrap,
+	html.fadeout footer {
+	  opacity: 0;
+	}
+	html.fadeout .page-loader,
+	html.wf-active.fadeout .page-loader,
+	html.is-loaded.fadeout .page-loader {
+  	z-index: 100;
+  	opacity: 1;
+	}
+
+/* .....................................
+    loading
+..................................... */
+
+
+/* .....................................
+    links
+..................................... */
+	a:link {
+		color: #222;
+		text-decoration: none;
+	}
+	a:visited {
+		color: #222;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #444;
+		text-decoration: underline;
+	}
+	a:active {
+		color: #444;
+		text-decoration: underline;
+	}
+.page-loader {
+	background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2238%22%20height%3D%2238%22%20viewBox%3D%220%200%2038%2038%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%228.042%25%22%20y1%3D%220%25%22%20x2%3D%2265.682%25%22%20y2%3D%2223.865%25%22%20id%3D%22a%22%3E%3Cstop%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-opacity%3D%22.631%22%20offset%3D%2263.146%25%22%2F%3E%3Cstop%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20transform%3D%22translate%281%201%29%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M36%2018c0-9.94-8.06-18-18-18%22%20stroke%3D%22url%28%23a%29%22%20stroke-width%3D%222%22%3E%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20from%3D%220%2018%2018%22%20to%3D%22360%2018%2018%22%20dur%3D%220.9s%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Fpath%3E%3Ccircle%20fill%3D%22%23000%22%20cx%3D%2236%22%20cy%3D%2218%22%20r%3D%221%22%3E%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20from%3D%220%2018%2018%22%20to%3D%22360%2018%2018%22%20dur%3D%220.9s%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 50px;
+	background-size: cover;
+}
